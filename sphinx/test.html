@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>テスト &mdash; n_nkmr&#39;s wiki 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="n_nkmr&#39;s wiki 0.0.1 documentation" href="index.html" />
+    <link rel="prev" title="Scientific Linux" href="sphinx.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphinx.html" title="Scientific Linux"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>テスト<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">日付:</th><td class="field-body">2011/12/24</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id2">
+<h2>概要<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>sphinxがちゃんと動くかのテスト。</p>
+</div>
+<div class="section" id="restructuredtext">
+<h2>reStructuredText<a class="headerlink" href="#restructuredtext" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>セクション<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>セクションのヘッダは、セクションのタイトルを句読点などの記号の文字でアンダーラインを引くことで設定します。
+必要に応じてでオーバーラインも併用することができます。
+アンダーラインはテキストと同じか、それ以上の長さにする必要があります:</p>
+<p>通常は、文字の種類と見出しのレベルは関係ないため、どの文字でも使用することができます。
+使用していない種類のアンダーラインが出てくると、見出しのレベルが一段変わる、というルールになっています。
+参考までに、Pythonドキュメントで使っている慣例について紹介しておきます。:</p>
+<div class="highlight-python"><pre># 部: オーバーライン付き
+* 章: オーバーライン付き
+=, セクション
+-, サブセクション
+^, サブサブセクション
+", パラグラフ</pre>
+</div>
+<p>もちろん、どのようなマークアップ文字を選択しても自由ですし、組み合わせることで、より深い、ネストレベルを使用することもできます。
+reSTの文章を参照してください。
+ただし、ほとんどの対象となる出力フォーマット(HTML, LaTeX)は、ネストできる深さには限界が設定されている、ということは忘れないでください。</p>
+</div>
+<div class="section" id="id4">
+<h3>リスト<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>リストを表現するマークアップはほぼ結果の見た目通りです。
+パラグラフの最初をアスタリスクで開始して、適切にインデントをしてやるだけです。
+ナンバー付きのリストも同様です。
+# を使うことで、ナンバリングを自動で行うこともできます:</p>
+<div class="highlight-python"><pre>* これは丸が行頭に付くリストです
+* このリストには2つの項目があります。2つめの
+  項目は2行にまたがっています。
+
+1. これはナンバー付きリストです。
+2. これも2つの項目があります。
+
+#. これはナンバー付きリストです。
+#. これも2つの項目があります。</pre>
+</div>
+<p>テストされたリストも使用することができますが、親のリストとは空白行で区切る必要があります:</p>
+<div class="highlight-python"><pre>* これは
+* リストです
+
+ * ネストされたリストです
+ * サブ項目です</pre>
+</div>
+<ul class="simple">
+<li>こうやって、親のリストを継続することもできます</li>
+</ul>
+<p>定義リストは以下のようにして作成します:</p>
+<dl class="docutils">
+<dt>用語 (行末までが用語です)</dt>
+<dd><p class="first">用語の定義です。定義はインデントする必要があります。</p>
+<p class="last">空白行で区切ることで、定義に複数のパラグラフを書くことができます。</p>
+</dd>
+<dt>次の用語</dt>
+<dd>説明</dd>
+</dl>
+<p>パラグラフは周囲のパラグラフよりも深いインデントにしてやる必要があります。</p>
+</div>
+<div class="section" id="id5">
+<h3>ハイパーリンク<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h4>外部リンク<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://ターゲットURL">リンクテキスト</a> という書くことで、外部のウェブサイトへのリンクを埋め込むことができます。
+もしリンクテキストがウェブのアドレス&gt;である場合には、特別なマークアップは必要ありません。
+パーサーが通常のテキスト中でリンクか、メールアドレスを見つけると、そのままそれにリンクを埋め込んでくれます。</p>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx.shibu.jp/contents.html">sphinxドキュメント</a></li>
+<li><a class="reference external" href="http://www.planewave.org/translations/rst/quickref.html">はやわかり reStructuredText</a></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h4>内部リンク<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>内部リンクは特別なreSTのロールを通じて行われます。
+詳しくは、特別なマークアップ 自由な場所へのクロスリファレンス のセクションを見てください。</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>画像<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>reSTは画像に関するディレクティブもサポートしています。以下のように使用します。:</p>
+<div class="highlight-python"><pre>.. image:: gnu.png
+   (オプション)</pre>
+</div>
+<p>Sphinx内で使用する場合には、ソースファイルからの相対パスか、トップのソースディレクトリからの絶対パスでファイル名(ここでは gnu.png)を指定します。
+例えば、 sketch/spam.rst というソースファイルからは、 images/spam.png, ../images/spam.png, /images/spam.png というように書くことができます。</p>
+<p>このディレクティブを使用すると、Sphinxはビルド時に、指定された画像ファイルを出力ディレクトリのサブディレクトリにコピーします。
+HTML出力の場合には、 _static といったディレクトリにコピーされます。</p>
+<p>イメージサイズに関するオプション(width と height)は以下のように解釈されます。
+もし単位が無い、もしくは単位がpixelsの場合には、与えられたサイズは出力するチャンネルがピクセルをサポートしているかどうかだけが考慮されます。
+例えば、LaTeX出力はこれをサポートしていません。
+田の単位(ポイントを表す pt など)はHTMLでもLaTeXでも使用されます。</p>
+<p>Sphinxは標準のdocutilsを拡張していて、拡張子としてアスタリスク(*)を受け取れるようになっています:</p>
+<div class="highlight-python"><pre>.. image:: gnu.*</pre>
+</div>
+<p>アスタリスクが指定されると、Sphinxは指定されたパターンにマッチするすべての画像フォーマットを検索して、使用するタイプを決定します。
+それぞれのビルダーは、候補となるベストのイメージを選択します。
+gnu.* にマッチするファイル名として、 gnu.pdf と、 gnu.png がソースツリーの中に存在していたとします。
+LaTeXビルダーは前者のPDFを、HTMLビルダーは後者のPNGを優先的に利用します。</p>
+</div>
+<div class="section" id="id11">
+<h3>テーブル<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>テーブルの縦線が見えない</p>
+<div class="section" id="id12">
+<h4>グリッドテーブル<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="34%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>body row 1</td>
+<td>column 2</td>
+<td>column 3</td>
+</tr>
+<tr class="row-odd"><td>body row 2</td>
+<td colspan="2">Cells may span columns.</td>
+</tr>
+<tr class="row-even"><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td rowspan="2"><ul class="first last simple">
+<li>Cells</li>
+<li>contain</li>
+<li>blocks.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h4>シンプルテーブル<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Inputs</th>
+<th class="head">Output</th>
+</tr>
+<tr class="row-even"><th class="head">A</th>
+<th class="head">B</th>
+<th class="head">A or B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr class="row-odd"><td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>区切り線<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>区切り線のマーカは、記号文字4つ以上からなる
+水平ラインです。:</p>
+<div class="highlight-python"><pre>------------</pre>
+</div>
+<p>区切り線は、セクションの最初や最後に置くべきでは
+ありませんし、区切り線を連続してならべるのも
+避けるべきです。</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">テスト</a><ul>
+<li><a class="reference internal" href="#id2">概要</a></li>
+<li><a class="reference internal" href="#restructuredtext">reStructuredText</a><ul>
+<li><a class="reference internal" href="#id3">セクション</a></li>
+<li><a class="reference internal" href="#id4">リスト</a></li>
+<li><a class="reference internal" href="#id5">ハイパーリンク</a><ul>
+<li><a class="reference internal" href="#id6">外部リンク</a></li>
+<li><a class="reference internal" href="#id9">内部リンク</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">画像</a></li>
+<li><a class="reference internal" href="#id11">テーブル</a><ul>
+<li><a class="reference internal" href="#id12">グリッドテーブル</a></li>
+<li><a class="reference internal" href="#id13">シンプルテーブル</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">区切り線</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphinx.html"
+                        title="previous chapter">Scientific Linux</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/test.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphinx.html" title="Scientific Linux"
+             >previous</a> |</li>
+        <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, n_nkmr.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
