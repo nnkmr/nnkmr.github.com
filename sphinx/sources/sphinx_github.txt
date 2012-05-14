@@ -1,0 +1,82 @@
+Amazon S3 で Sphinx
+==============================
+:更新日付: |today|
+
+.. はじめに{{{
+
+はじめに
+------------------------------
+
+Scientific Linux (SL) は、CentOS や Oracle Linux と同様に Red Hat Enterprise Linux (RHEL) 互換の Linux ディストリビューションです。
+RHEL のソースRPM (SRPM) から RedHat 社の商標に関する部分を削除し、再コンパイルされたものが無償で公開されています。
+フェルミ国立加速器研究所（Fermi National Accelerator Laboratory）及び欧州原子核研究機構（CERN）で開発されています。
+両研究機関のサーバー・ワークステーションは SL で構成されており、開発が突然終了するような可能性は低いため、リリースが遅れていた CentOS の代替として最近注目されています。
+
+* `Scientific Linux (公式サイト) <http://www.scientificlinux.org/>`_
+* `Scientific Linux - Wikipedia (English) <http://en.wikipedia.org/wiki/Scientific_Linux>`_
+* `Scientific Linux - Wikipedia (日本語) <http://ja.wikipedia.org/wiki/Scientific_Linux>`_
+* `DistroWatch.com: Scientific Linux <http://distrowatch.com/table.php?distribution=scientific>`_
+* `Mailing List Archives of SCIENTIFIC-LINUX-DEVEL@LISTSERV.FNAL.GOV <http://listserv.fnal.gov/scripts/wa.exe?A0=scientific-linux-devel&T=0>`_
+* `Scientific Linux Tips <https://ribf.riken.jp/comp/tips/SL3.html>`_
+* `Ubuntu Weekly Recipe：第217回　新年度特別企画・Red HatユーザーのためのUbuntuパッケージ管理の心得｜gihyo.jp … 技術評論社 <http://gihyo.jp/admin/serial/01/ubuntu-recipe/0217>`_
+
+.. }}}
+
+.. 参考サイト{{{
+
+参考サイト
+------------------------------
+
+* `Scientific Linuxで自宅サーバー構築 <http://scientificsrv.com/>`_
+* `Scientific Linux 6 - ダウンロード ： Server World <http://www.server-world.info/query?os=Scientific_Linux_6&p=download>`_
+* `2ch-Linux-Beginners - InstallationScientificLinuxFAQs <http://www12.atwiki.jp/linux2ch/pages/36.html>`_
+* `Scientific Linux 6｜カスタムOSインストールガイド｜さくらのVPS｜さくらインターネット公式サポートサイト <http://support.sakura.ad.jp/manual/vps/mainte/custom_scientificlinux.html>`_
+* `Scientific Linux » sa-sa-ki.jpのblog <http://www.sa-sa-ki.jp/blog/category/os/scientificlinux/>`_
+
+.. }}}
+
+.. {{{
+
+
+.. }}}
+
+
+Global setup:
+ Set up git
+  git config --global user.name "n_nkmr"
+  git config --global user.email n.nkmrg@gmail.com
+Add your public key
+      
+Next steps:
+  mkdir nnkmr-sphinx
+  cd nnkmr-sphinx
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:nnkmr/nnkmr-sphinx.git
+  git push -u origin master
+      
+Existing Git Repo?
+  cd existing_git_repo
+  git remote add origin git@github.com:nnkmr/nnkmr-sphinx.git
+  git push -u origin master
+      
+Importing a Subversion Repo?
+  Check out the guide for step by step instructions.
+      
+When you're done:
+  Continue
+
+
+
+
+.. {{{
+
+
+.. }}}
+
+.. vim syntax sugars{{{
+   vim:set ft=rst foldmethod=marker:
+   }}}
+
