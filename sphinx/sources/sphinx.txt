@@ -31,15 +31,23 @@ reStructuredText のソースで作成され、Sphinxを使って作られてい
 
 Ubuntu には sphinx のパッケージが用意されていて、簡単にインストールすることができます。
 
-::
+.. code-block:: bash
 
-$ sudo apt-get install python-sphinx
+ $ sudo apt-get install python-sphinx
 
-Sphinxでプロジェクトを作成するには、以下のようにタイプします。
+Ubuntu 12.04 では sphinx 1.1.3 がインストールされます。
 
-::
+.. code-block:: bash
 
-$ sphinx-quickstart
+ $ dpkg-query -l | grep python-sphinx
+ ii  python-sphinx  1.1.3+dfsg-2ubuntu2  documentation generator for Python projects (implemented in Python 2)
+
+
+Sphinx では、以下のコマンドを実行し質問に答えることで、プロジェクトが作成されます。
+
+.. code-block:: bash
+
+ $ sphinx-quickstart
 
 いくつか質問されますが、必須で回答しなければならないのは、次の項目です。
 
@@ -52,6 +60,24 @@ $ sphinx-quickstart
 * `sphinx-quickstartの詳細説明 :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/sphinxquickstart.html>`_
 
 .. }}}
+.. conf.py の設定 {{{
+
+conf.py の設定
+------------------------------
+
+* `ビルド設定ファイル — Sphinx v1.0 (hg) documentation <http://sphinx.shibu.jp/config.html>`_
+
+日本語化
+'''''''''
+
+日付などが日本語ローカライズの形式で出力されるようになります。
+
+::
+
+ language = 'ja'
+
+
+.. }}}
 .. 参考サイト{{{
 
 参考サイト
@@ -62,6 +88,7 @@ $ sphinx-quickstart
 
 .. }}}
 .. {{{
+
 
 ------------------------------
 

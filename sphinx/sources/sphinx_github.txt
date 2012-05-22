@@ -24,16 +24,16 @@ GitHub Pagesを用意します
 
 最初のコミットは 10 分ぐらいで自動的に http://username.github.com/ に公開されます。
 
-::
+.. code-block:: bash
 
-$ mkdir nnkmr.github.com
-$ cd nnkmr.github.com
-$ git init
-$ vi index.html
-$ git add index.html
-$ git commit -m 'first commit'
-$ git remote add origin git@github.com:nnkmr/nnkmr.github.com.git
-$ git push -u origin master
+ $ mkdir nnkmr.github.com
+ $ cd nnkmr.github.com
+ $ git init
+ $ vi index.html
+ $ git add index.html
+ $ git commit -m 'first commit'
+ $ git remote add origin git@github.com:nnkmr/nnkmr.github.com.git
+ $ git push -u origin master
 
 http://nnkmr.github.com/ に公開されます。
 
@@ -54,15 +54,15 @@ sphinxtogithub を利用すると、 Github Pages 用のリンクに修正して
 sphinxtogithub をインストールするには easy_install を使用します。
 easy_install は Ubuntu では python-setuptools に梱包されています。
 
-:: 
+.. code-block:: bash
 
   $ sudo apt-get install python-setuptools
 
 easy_install を使って sphinxtogithub をインストールします。
 
-::
+.. code-block:: bash
 
-  $ sudo easy_install -ZU sphinxtogithub
+ $ sudo easy_install -ZU sphinxtogithub
 
 sphinxtogithub は /usr/local/bin /usr/local/lib/python2.7/dist-packages/ にインストールされます。
 
@@ -80,7 +80,7 @@ make html でプロジェクトを生成しなおすと、Github Pages 対応が
 更新作業
 -----------------------------------------
 
-::
+.. code-block:: bash
 
  #!/bin/sh
  
