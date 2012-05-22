@@ -112,21 +112,21 @@ make html でプロジェクトを生成しなおすと、Github Pages 対応が
 
 ::
 
-#!/bin/sh
-TIME=`date +%Y/%m/%d/%H:%M:%S`
-SPHINX_SOURCE="~/sphinx/"
-SPHINX_HTML="~/sphinx/_build/html/"
+ #!/bin/sh
  
-GITHUB_HTML="~/git/nnkmr.github.com/sphinx/"
+ TIME=`date +%Y/%m/%d/%H:%M:%S`
+ SPHINX_SOURCE="$HOME/sphinx/"
+ SPHINX_HTML="$HOME/sphinx/_build/html/"
+ GITHUB_HTML="$HOME/git/nnkmr.github.com/sphinx/"
+  
+ cd $SPHINX_SOURCE
+ make html
+ rsync -av $SPHINX_HTML $GITHUB_HTML
  
-cd $SPHINX_SOURCE
-make html
-rsync -av $SPHINX_HTML $GITHUB_HTML
- 
-cd $GITHUB_HTML
-git add -a
-git commit -m "Modify at $TIME"
-git push
+ cd $GITHUB_HTML
+ git add .
+ git commit -m "Modify at $TIME"
+ git push 
 
 .. }}}
 .. 参考サイト{{{

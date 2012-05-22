@@ -135,20 +135,22 @@ easy_install は Ubuntu では python-setuptools に梱包されています。<
 </div>
 <div class="section" id="id3">
 <h2>更新作業<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/bin/sh</span>
-</pre></div>
-</div>
-<p>TIME=`date +%Y/%m/%d/%H:%M:%S`
-SPHINX_SOURCE=&#8221;~/sphinx/&#8221;
-SPHINX_HTML=&#8221;~/sphinx/_build/html/&#8221;</p>
-<p>GITHUB_HTML=&#8221;~/git/nnkmr.github.com/sphinx/&#8221;</p>
-<p>cd $SPHINX_SOURCE
+<div class="highlight-python"><pre>#!/bin/sh
+
+TIME=`date +%Y/%m/%d/%H:%M:%S`
+SPHINX_SOURCE="$HOME/sphinx/"
+SPHINX_HTML="$HOME/sphinx/_build/html/"
+GITHUB_HTML="$HOME/git/nnkmr.github.com/sphinx/"
+
+cd $SPHINX_SOURCE
 make html
-rsync -av $SPHINX_HTML $GITHUB_HTML</p>
-<p>cd $GITHUB_HTML
-git add -a
-git commit -m &#8220;Modify at $TIME&#8221;
-git push</p>
+rsync -av $SPHINX_HTML $GITHUB_HTML
+
+cd $GITHUB_HTML
+git add .
+git commit -m "Modify at $TIME"
+git push</pre>
+</div>
 </div>
 <div class="section" id="id4">
 <h2>参考サイト<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
