@@ -111,7 +111,7 @@ set listchars=tab:\ \
 set list
 "タブ幅を設定する
 set tabstop=2
-set shiftwidth=4
+set shiftwidth=2
 "インデントをTabではなくスペースにしたい
 set expandtab
 "入力中のコマンドをステータスに表示する
@@ -179,12 +179,80 @@ set backspace=2
 set foldmethod=marker
 "}}}
 " vim syntax sugars{{{
-" vim:set ft=sh foldmethod=marker:
+" vim:set foldmethod=marker:
 " }}}</pre>
 </div>
 </div>
 <div class="section" id="id3">
-<h2>参考サイト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>画像分割<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>水平分割　 :sp filename</li>
+<li>垂直分割　 :vsp filename</li>
+<li>画面移動　 C-w hjkl</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>バッファ移動<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>別ファイルを開く　:e filename</li>
+<li>1つ前のバッファ　 :bp</li>
+<li>1つ後のバッファ　 :bn</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>折り畳み<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>よく使うコマンド</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>zi</td>
+<td>折り畳みの有効無効の切り替え</td>
+</tr>
+<tr class="row-even"><td>zf</td>
+<td>折り畳みを作成する</td>
+</tr>
+<tr class="row-odd"><td>za</td>
+<td>折り畳みの開け閉め</td>
+</tr>
+<tr class="row-even"><td>zd</td>
+<td>折り畳みを削除する</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>時々使うコマンド</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>zA</td>
+<td>折り畳みの開け閉め（再帰）</td>
+</tr>
+<tr class="row-even"><td>zD</td>
+<td>折り畳みを削除する（再帰）</td>
+</tr>
+<tr class="row-odd"><td>zE</td>
+<td>全ての折り畳みを削除</td>
+</tr>
+<tr class="row-even"><td>zR</td>
+<td>全ての折り畳みを開く</td>
+</tr>
+<tr class="row-odd"><td>zM</td>
+<td>全ての折り畳みを閉じる</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h2>参考サイト<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://www.vim.org/">welcome home : vim online</a></li>
 <li><a class="reference external" href="http://vim-jp.org/vimdoc-ja/">Vim documentation: help</a></li>
@@ -206,7 +274,10 @@ set foldmethod=marker
 <li><a class="reference internal" href="#">Vim</a><ul>
 <li><a class="reference internal" href="#id1">はじめに</a></li>
 <li><a class="reference internal" href="#vimrc">vimrc</a></li>
-<li><a class="reference internal" href="#id3">参考サイト</a></li>
+<li><a class="reference internal" href="#id3">画像分割</a></li>
+<li><a class="reference internal" href="#id4">バッファ移動</a></li>
+<li><a class="reference internal" href="#id5">折り畳み</a></li>
+<li><a class="reference internal" href="#id6">参考サイト</a></li>
 </ul>
 </li>
 </ul>

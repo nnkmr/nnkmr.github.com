@@ -1,0 +1,223 @@
+Vim
+==============================
+:更新日付: |today|
+
+.. はじめに{{{
+
+はじめに
+------------------------------
+
+Vim（ヴィムまたはヴィアイエム）は、vi から派生し、発展した高機能なテキストエディタです。
+
+.. }}}
+.. 目次{{{
+
+.. contents::
+  これは目次です
+  :local:
+  :depth: 2
+  :backlinks: none
+
+.. }}}
+.. vimrc {{{
+
+vimrc
+------------------------------
+
+::
+
+ " .vimrc
+ " 更新日: 2012年  5月 22日 火曜日 17:21:12 JST
+ 
+ " 文字コード関連 {{{
+ "Vimが内部で用いるエンコーディング
+ set encoding=utf-8
+ "端末の出力に用いられるエンコーディング
+ set termencoding=utf-8
+ "バッファの保存時に用いるエンコーディング
+ set fileencoding=utf-8
+ "ファイルを開く際に自動的にエンコーディングを判定
+ set fileencodings=iso-2022-jp,euc-jp,cp932,utf-8
+ " }}}
+ " 改行コードの自動認識 {{{
+ set fileformats=unix,dos,mac
+ " }}}
+ " 編集関連 {{{
+ "オートインデントする
+ set autoindent
+ filetype on
+ filetype indent on
+ filetype plugin on
+ "コメント行で改行すると、次の行の先頭にも自動的にコメント記号が入るのを防ぐ
+ set fo-=r
+ "cの自動インデント
+ set cindent
+ "新しい行を作ったときに高度な自動インデントを行う
+ set smartindent
+ " }}}
+ " 検索関連 {{{
+ "
+ "検索文字列が小文字の場合は大文字小文字を区別なく検索する
+ set ignorecase
+ "検索文字列に大文字が含まれている場合は区別して検索する
+ set smartcase
+ "検索時に最後まで行ったら最初に戻る
+ set wrapscan
+ "検索文字列入力時に順次対象文字列にヒットさせる
+ set incsearch
+ " }}}
+ " 装飾関連 {{{
+ "
+ "シンタックスハイライトを有効にする
+ syntax on
+ "行番号を表示する
+ "set number
+ "タブの左側にカーソル表示
+ set listchars=tab:\ \ 
+ set list
+ "タブ幅を設定する
+ set tabstop=2
+ set shiftwidth=2
+ "インデントをTabではなくスペースにしたい
+ set expandtab
+ "入力中のコマンドをステータスに表示する
+ set showcmd
+ "括弧入力時の対応する括弧を表示
+ set showmatch
+ "検索結果文字列のハイライトを有効にする
+ set hlsearch
+ "ステータスラインを常に表示
+ set laststatus=2
+ "ステータスラインに文字コードと改行文字を表示する
+ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+ "現在のモードを表示
+ set showmode
+ "タイトルをウインドウ枠に表示する。
+ set title
+ "ルーラーを表示する。
+ set ruler
+ " }}}
+ " 他 {{{
+ "
+ "バックアップファイルを作らない
+ set nobackup
+ "バックアップファイルの保存場所を変更
+ "set backupdir=~/.vim_backup
+ 
+ "swpファイルの保存場所を変更
+ "set directory=~/.vim_swp
+ 
+ "バッファを切り替えても、 undo の効力を失わないようにする
+ set hidden
+ 
+ "Vi 互換モードにしない
+ set nocompatible
+ "}}}
+ " 補完・履歴 {{{
+ "
+ set wildmenu
+ set history=50
+ "}}}
+ " マップ定義 {{{
+ "
+ "バッファ移動用キーマップ
+ " F2: 前のバッファ
+ " F3: 次のバッファ
+ " F4: バッファ削除
+ map <F2> <ESC>:bp<CR>
+ map <F3> <ESC>:bn<CR>
+ map <F4> <ESC>:bw<CR>
+ "表示行単位で行移動する
+ nnoremap j gj
+ nnoremap k gk
+ "フレームサイズを怠惰に変更する
+ map <kPlus> <C-W>+
+ map <kMinus> <C-W>-
+ "}}}
+ " 全角スペースを視覚化 {{{
+ highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
+ match ZenkakuSpace /　/
+ "}}}
+ " Backspaceで改行を削除する {{{
+ set backspace=2
+ "}}}
+ " マーカー文字列を埋め込んで、ソースコードを折り畳み表示する {{{
+ set foldmethod=marker
+ "}}}
+ " vim syntax sugars{{{
+ " vim:set foldmethod=marker:
+ " }}}
+
+.. }}}
+.. 画像分割{{{
+
+画像分割
+------------------------------
+
+* 水平分割　 :sp filename
+* 垂直分割　 :vsp filename
+* 画面移動　 C-w hjkl
+
+.. }}}
+.. バッファ移動{{{
+
+バッファ移動
+------------------------------
+
+* 別ファイルを開く　:e filename
+* 1つ前のバッファ　 :bp
+* 1つ後のバッファ　 :bn
+
+.. }}}
+.. 折り畳み{{{
+
+折り畳み
+------------------------------
+
+* よく使うコマンド
+
++----+---------------------------------+
+| zi | 折り畳みの有効無効の切り替え    |
++----+---------------------------------+
+| zf | 折り畳みを作成する              |
++----+---------------------------------+
+| za | 折り畳みの開け閉め              |
++----+---------------------------------+
+| zd | 折り畳みを削除する              |
++----+---------------------------------+
+
+* 時々使うコマンド
+
++----+---------------------------------+
+| zA | 折り畳みの開け閉め（再帰）      |
++----+---------------------------------+
+| zD | 折り畳みを削除する（再帰）      |
++----+---------------------------------+
+| zE | 全ての折り畳みを削除            |
++----+---------------------------------+
+| zR | 全ての折り畳みを開く            |
++----+---------------------------------+
+| zM | 全ての折り畳みを閉じる          |
++----+---------------------------------+
+
+
+.. }}}
+.. 参考サイト{{{
+
+参考サイト
+------------------------------
+
+* `welcome home : vim online <http://www.vim.org/>`_
+* `Vim documentation: help <http://vim-jp.org/vimdoc-ja/>`_
+* `VimWiki <http://vimwiki.net/>`_
+* `KaoriYa <http://www.kaoriya.net/>`_
+
+.. }}}
+.. {{{
+
+------------------------------
+
+.. }}}
+.. vim syntax sugars{{{
+   vim:set ft=rst foldmethod=marker:
+   }}}
