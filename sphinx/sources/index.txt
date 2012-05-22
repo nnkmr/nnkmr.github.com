@@ -28,6 +28,7 @@ n_nkmr's Wiki
 
 .. }}}
 .. Indices and tables{{{
+
 Indices and tables
 ==================
 

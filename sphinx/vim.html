@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Vim &mdash; n_nkmr&#39;s wiki 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="static/default.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/translations.js"></script>
+    <link rel="top" title="n_nkmr&#39;s wiki 0.0.1 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="vim">
+<h1>Vim<a class="headerlink" href="#vim" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">2012 年 05 月 22 日</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h2>はじめに<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Vim（ヴィムまたはヴィアイエム）は、vi から派生し、発展した高機能なテキストエディタです。</p>
+</div>
+<div class="section" id="vimrc">
+<h2>vimrc<a class="headerlink" href="#vimrc" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python"><pre>" .vimrc
+" 更新日: 2012年  5月 22日 火曜日 17:21:12 JST
+
+" 文字コード関連 {{{
+"Vimが内部で用いるエンコーディング
+set encoding=utf-8
+"端末の出力に用いられるエンコーディング
+set termencoding=utf-8
+"バッファの保存時に用いるエンコーディング
+set fileencoding=utf-8
+"ファイルを開く際に自動的にエンコーディングを判定
+set fileencodings=iso-2022-jp,euc-jp,cp932,utf-8
+" }}}
+" 改行コードの自動認識 {{{
+set fileformats=unix,dos,mac
+" }}}
+" 編集関連 {{{
+"オートインデントする
+set autoindent
+filetype on
+filetype indent on
+filetype plugin on
+"コメント行で改行すると、次の行の先頭にも自動的にコメント記号が入るのを防ぐ
+set fo-=r
+"cの自動インデント
+set cindent
+"新しい行を作ったときに高度な自動インデントを行う
+set smartindent
+" }}}
+" 検索関連 {{{
+"
+"検索文字列が小文字の場合は大文字小文字を区別なく検索する
+set ignorecase
+"検索文字列に大文字が含まれている場合は区別して検索する
+set smartcase
+"検索時に最後まで行ったら最初に戻る
+set wrapscan
+"検索文字列入力時に順次対象文字列にヒットさせる
+set incsearch
+" }}}
+" 装飾関連 {{{
+"
+"シンタックスハイライトを有効にする
+syntax on
+"行番号を表示する
+"set number
+"タブの左側にカーソル表示
+set listchars=tab:\ \
+set list
+"タブ幅を設定する
+set tabstop=2
+set shiftwidth=4
+"インデントをTabではなくスペースにしたい
+set expandtab
+"入力中のコマンドをステータスに表示する
+set showcmd
+"括弧入力時の対応する括弧を表示
+set showmatch
+"検索結果文字列のハイライトを有効にする
+set hlsearch
+"ステータスラインを常に表示
+set laststatus=2
+"ステータスラインに文字コードと改行文字を表示する
+set statusline=%&lt;%f\ %m%r%h%w%{'['.(&amp;fenc!=''?&amp;fenc:&amp;enc).']['.&amp;ff.']'}%=%l,%c%V%8P
+"現在のモードを表示
+set showmode
+"タイトルをウインドウ枠に表示する。
+set title
+"ルーラーを表示する。
+set ruler
+" }}}
+" 他 {{{
+"
+"バックアップファイルを作らない
+set nobackup
+"バックアップファイルの保存場所を変更
+"set backupdir=~/.vim_backup
+
+"swpファイルの保存場所を変更
+"set directory=~/.vim_swp
+
+"バッファを切り替えても、 undo の効力を失わないようにする
+set hidden
+
+"Vi 互換モードにしない
+set nocompatible
+"}}}
+" 補完・履歴 {{{
+"
+set wildmenu
+set history=50
+"}}}
+" マップ定義 {{{
+"
+"バッファ移動用キーマップ
+" F2: 前のバッファ
+" F3: 次のバッファ
+" F4: バッファ削除
+map &lt;F2&gt; &lt;ESC&gt;:bp&lt;CR&gt;
+map &lt;F3&gt; &lt;ESC&gt;:bn&lt;CR&gt;
+map &lt;F4&gt; &lt;ESC&gt;:bw&lt;CR&gt;
+"表示行単位で行移動する
+nnoremap j gj
+nnoremap k gk
+"フレームサイズを怠惰に変更する
+map &lt;kPlus&gt; &lt;C-W&gt;+
+map &lt;kMinus&gt; &lt;C-W&gt;-
+"}}}
+" 全角スペースを視覚化 {{{
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
+match ZenkakuSpace /　/
+"}}}
+" Backspaceで改行を削除する {{{
+set backspace=2
+"}}}
+" マーカー文字列を埋め込んで、ソースコードを折り畳み表示する {{{
+set foldmethod=marker
+"}}}
+" vim syntax sugars{{{
+" vim:set ft=sh foldmethod=marker:
+" }}}</pre>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>参考サイト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.vim.org/">welcome home : vim online</a></li>
+<li><a class="reference external" href="http://vim-jp.org/vimdoc-ja/">Vim documentation: help</a></li>
+<li><a class="reference external" href="http://vimwiki.net/">VimWiki</a></li>
+<li><a class="reference external" href="http://www.kaoriya.net/">KaoriYa</a></li>
+</ul>
+<hr class="docutils" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Vim</a><ul>
+<li><a class="reference internal" href="#id1">はじめに</a></li>
+<li><a class="reference internal" href="#vimrc">vimrc</a></li>
+<li><a class="reference internal" href="#id3">参考サイト</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/vim.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, n_nkmr.
+      このドキュメントは <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3 で生成しました。
+    </div>
+  </body>
+</html>

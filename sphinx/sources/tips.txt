@@ -7,39 +7,40 @@ Tips
 はじめに
 ------------------------------
 
-まとまりのない小ネタです。
+とりとめもない小技です。
 
 .. }}}
+.. 目次{{{
 
-.. {{{各種設定・利用方法
+.. contents::
+  これは目次です
+  :local:
+  :depth: 1
+  :backlinks: none
 
-各種設定・利用方法
+.. }}}
+.. Create Link{{{
+
+Create Link
 ------------------------------
 
-.. }}}
+Chromium の Extension です。
+Firefox の addon Make Link の Chrome 版です。
+WebサイトのタイトルとURLを色んな形式でコピーすることができます。
+Sphinx や Redmine などリンクを独特な形式を登録しておくと便利です。
 
-.. toctree::
-   :maxdepth: 2
+* `Create Link <https://chrome.google.com/webstore/detail/gcmghdmnkfdbncmnmlkkglmnnhagajbm>`_ 
 
++---------+--------------------+-----------+ 
+| Name    | Format             | Filter    | 
++=========+====================+===========+ 
+| Sphinx  | \`%text% <%url%>`_ |           | 
++---------+--------------------+-----------+ 
+| Redmine | "%text%":%url%     |           | 
++---------+--------------------+-----------+
 
-.. 参考サイト{{{
-
-参考サイト
-------------------------------
-
-* `Scientific Linuxで自宅サーバー構築 <http://scientificsrv.com/>`_
-* `Scientific Linux 6 - ダウンロード ： Server World <http://www.server-world.info/query?os=Scientific_Linux_6&p=download>`_
-* `2ch-Linux-Beginners - InstallationScientificLinuxFAQs <http://www12.atwiki.jp/linux2ch/pages/36.html>`_
-* `Scientific Linux 6｜カスタムOSインストールガイド｜さくらのVPS｜さくらインターネット公式サポートサイト <http://support.sakura.ad.jp/manual/vps/mainte/custom_scientificlinux.html>`_
-* `Scientific Linux » sa-sa-ki.jpのblog <http://www.sa-sa-ki.jp/blog/category/os/scientificlinux/>`_
-
-.. }}}
-.. {{{
-
-------------------------------
 
 .. }}}
-
 .. vim syntax sugars{{{
    vim:set ft=rst foldmethod=marker:
    }}}
