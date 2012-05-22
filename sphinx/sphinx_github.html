@@ -134,7 +134,24 @@ easy_install は Ubuntu では python-setuptools に梱包されています。<
 <p>make html でプロジェクトを生成しなおすと、Github Pages 対応ができます。</p>
 </div>
 <div class="section" id="id3">
-<h2>参考サイト<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>更新作業<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/bin/sh</span>
+</pre></div>
+</div>
+<p>TIME=`date +%Y/%m/%d/%H:%M:%S`
+SPHINX_SOURCE=&#8221;~/sphinx/&#8221;
+SPHINX_HTML=&#8221;~/sphinx/_build/html/&#8221;</p>
+<p>GITHUB_HTML=&#8221;~/git/nnkmr.github.com/sphinx/&#8221;</p>
+<p>cd $SPHINX_SOURCE
+make html
+rsync -av $SPHINX_HTML $GITHUB_HTML</p>
+<p>cd $GITHUB_HTML
+git add -a
+git commit -m &#8220;Modify at $TIME&#8221;
+git push</p>
+</div>
+<div class="section" id="id4">
+<h2>参考サイト<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/michaeljones/sphinx-to-github">michaeljones/sphinx-to-github</a></li>
 <li><a class="reference external" href="http://lucasbardella.com/report/hosting-your-sphinx-docs-in-github/">Hosting your Sphinx docs in Github - Luca Sbardella</a></li>
@@ -156,7 +173,8 @@ easy_install は Ubuntu では python-setuptools に梱包されています。<
 <li><a class="reference internal" href="#id2">GitHub Pagesを用意します</a></li>
 <li><a class="reference internal" href="#sphinx">sphinx を用意する</a></li>
 <li><a class="reference internal" href="#sphinxtogitdub">sphinxtogitdub のインストール</a></li>
-<li><a class="reference internal" href="#id3">参考サイト</a></li>
+<li><a class="reference internal" href="#id3">更新作業</a></li>
+<li><a class="reference internal" href="#id4">参考サイト</a></li>
 </ul>
 </li>
 </ul>
