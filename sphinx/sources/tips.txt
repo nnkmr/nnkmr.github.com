@@ -1,0 +1,46 @@
+Tips
+==============================
+:更新日付: |today|
+
+.. はじめに{{{
+
+はじめに
+------------------------------
+
+まとまりのない小ネタです。
+
+.. }}}
+
+.. {{{各種設定・利用方法
+
+各種設定・利用方法
+------------------------------
+
+.. }}}
+
+.. toctree::
+   :maxdepth: 2
+
+
+.. 参考サイト{{{
+
+参考サイト
+------------------------------
+
+* `Scientific Linuxで自宅サーバー構築 <http://scientificsrv.com/>`_
+* `Scientific Linux 6 - ダウンロード ： Server World <http://www.server-world.info/query?os=Scientific_Linux_6&p=download>`_
+* `2ch-Linux-Beginners - InstallationScientificLinuxFAQs <http://www12.atwiki.jp/linux2ch/pages/36.html>`_
+* `Scientific Linux 6｜カスタムOSインストールガイド｜さくらのVPS｜さくらインターネット公式サポートサイト <http://support.sakura.ad.jp/manual/vps/mainte/custom_scientificlinux.html>`_
+* `Scientific Linux » sa-sa-ki.jpのblog <http://www.sa-sa-ki.jp/blog/category/os/scientificlinux/>`_
+
+.. }}}
+.. {{{
+
+------------------------------
+
+.. }}}
+
+.. vim syntax sugars{{{
+   vim:set ft=rst foldmethod=marker:
+   }}}
+

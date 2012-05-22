@@ -41,36 +41,6 @@ Github Pages では各リポジトリごとにプロジェクトページを作�
 各プロジェクトごとにページを作成することでマニュアルなどの公開が便利にできます。
 
 .. }}}
-.. {{{ sphinx を用意する
-
-sphinx を用意する
------------------------------------------
-
-* `Sphinxをはじめよう :: Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/index.html>`_
-
-Ubuntu には sphinx のパッケージが用意されていて、簡単にインストールすることができます。
-
-::
-
-$ sudo apt-get install python-sphinx
-
-Sphinxでプロジェクトを作成するには、以下のようにタイプします。
-
-::
-
-$ sphinx-quickstart
-
-いくつか質問されますが、必須で回答しなければならないのは、次の項目です。
-
-* プロジェクト名: n_nkmr's Doc
-* バージョン番号: 0.0.1
-* 著者の名前: n_nkmr
-
-後はEnterキーだけで大丈夫です。
-
-* `sphinx-quickstartの詳細説明 :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/sphinxquickstart.html>`_
-
-.. }}}
 .. sphinxtogitdub のインストール{{{
 
 sphinxtogitdub のインストール

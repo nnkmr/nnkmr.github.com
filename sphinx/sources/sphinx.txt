@@ -12,12 +12,46 @@ Georg Brandlによって開発され、BSDライセンスのもとで公開さ�
 reStructuredText のソースで作成され、Sphinxを使って作られています。
 
 .. }}}
+.. 目次{{{
+
+目次:
 
 .. toctree::
    :maxdepth: 2
 
    sphinx_github
 
+.. }}}
+.. はじめ方{{{
+
+はじめ方
+-----------------------------------------
+
+* `Sphinxをはじめよう :: Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/index.html>`_
+
+Ubuntu には sphinx のパッケージが用意されていて、簡単にインストールすることができます。
+
+::
+
+$ sudo apt-get install python-sphinx
+
+Sphinxでプロジェクトを作成するには、以下のようにタイプします。
+
+::
+
+$ sphinx-quickstart
+
+いくつか質問されますが、必須で回答しなければならないのは、次の項目です。
+
+* プロジェクト名: n_nkmr's wiki
+* バージョン番号: 0.0.1
+* 著者の名前: n_nkmr
+
+後で、conf.py を編集することで変更が可能です。
+
+* `sphinx-quickstartの詳細説明 :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/sphinxquickstart.html>`_
+
+.. }}}
 .. 参考サイト{{{
 
 参考サイト

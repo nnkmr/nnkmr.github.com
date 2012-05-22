@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-n_nkmr's Memo
+n_nkmr's Wiki
 ==================================
-
+:更新日付: |today|
 
 .. はじめに{{{
 
@@ -16,6 +16,7 @@ n_nkmr's Memo
 正確性に欠ける点があると思いますので、ご注意ください。
 
 .. }}}
+.. 目次{{{
 
 目次:
 
@@ -25,6 +26,8 @@ n_nkmr's Memo
    sphinx
    test
 
+.. }}}
+.. Indices and tables{{{
 Indices and tables
 ==================
 
@@ -32,8 +35,7 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-|today|
-
+.. }}}
 .. vim syntax sugars{{{
    vim:set ft=rst foldmethod=marker:
    }}}
