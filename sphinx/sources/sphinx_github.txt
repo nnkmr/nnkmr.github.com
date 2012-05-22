@@ -7,77 +7,118 @@ GitHub で Sphinx
 はじめに
 ------------------------------
 
-Scientific Linux (SL) は、CentOS や Oracle Linux と同様に Red Hat Enterprise Linux (RHEL) 互換の Linux ディストリビューションです。
-RHEL のソースRPM (SRPM) から RedHat 社の商標に関する部分を削除し、再コンパイルされたものが無償で公開されています。
-フェルミ国立加速器研究所（Fermi National Accelerator Laboratory）及び欧州原子核研究機構（CERN）で開発されています。
-両研究機関のサーバー・ワークステーションは SL で構成されており、開発が突然終了するような可能性は低いため、リリースが遅れていた CentOS の代替として最近注目されています。
-
-* `Scientific Linux (公式サイト) <http://www.scientificlinux.org/>`_
-* `Scientific Linux - Wikipedia (English) <http://en.wikipedia.org/wiki/Scientific_Linux>`_
-* `Scientific Linux - Wikipedia (日本語) <http://ja.wikipedia.org/wiki/Scientific_Linux>`_
-* `DistroWatch.com: Scientific Linux <http://distrowatch.com/table.php?distribution=scientific>`_
-* `Mailing List Archives of SCIENTIFIC-LINUX-DEVEL@LISTSERV.FNAL.GOV <http://listserv.fnal.gov/scripts/wa.exe?A0=scientific-linux-devel&T=0>`_
-* `Scientific Linux Tips <https://ribf.riken.jp/comp/tips/SL3.html>`_
-* `Ubuntu Weekly Recipe：第217回　新年度特別企画・Red HatユーザーのためのUbuntuパッケージ管理の心得｜gihyo.jp … 技術評論社 <http://gihyo.jp/admin/serial/01/ubuntu-recipe/0217>`_
+`GitHub Pages <http://pages.github.com/>`_ に Sphinx で生成したドキュメントを公開する方法です。
 
 .. }}}
+.. GitHub Pagesを用意する{{{
 
+GitHub Pagesを用意します
+-----------------------------------------
+
+* `Help.GitHub - GitHub Pages <http://help.github.com/pages/>`_ 
+
+の作成方法に従えば、簡単に GitHub Pages を作成することができます。
+
+* username.github.com のレポジトリを作成します
+* master ブランチに index.html をコミットします
+
+最初のコミットは 10 分ぐらいで自動的に http://username.github.com/ に公開されます。
+
+::
+
+$ mkdir nnkmr.github.com
+$ cd nnkmr.github.com
+$ git init
+$ vi index.html
+$ git add index.html
+$ git commit -m 'first commit'
+$ git remote add origin git@github.com:nnkmr/nnkmr.github.com.git
+$ git push -u origin master
+
+http://nnkmr.github.com/ に公開されます。
+
+Github Pages では各リポジトリごとにプロジェクトページを作成することもできます。
+各プロジェクトごとにページを作成することでマニュアルなどの公開が便利にできます。
+
+.. }}}
+.. {{{ sphinx を用意する
+
+sphinx を用意する
+-----------------------------------------
+
+* `Sphinxをはじめよう :: Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/index.html>`_
+
+Ubuntu には sphinx のパッケージが用意されていて、簡単にインストールすることができます。
+
+::
+
+$ sudo apt-get install python-sphinx
+
+Sphinxでプロジェクトを作成するには、以下のようにタイプします。
+
+::
+
+$ sphinx-quickstart
+
+いくつか質問されますが、必須で回答しなければならないのは、次の項目です。
+
+* プロジェクト名: n_nkmr's Doc
+* バージョン番号: 0.0.1
+* 著者の名前: n_nkmr
+
+後はEnterキーだけで大丈夫です。
+
+* `sphinx-quickstartの詳細説明 :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/sphinxquickstart.html>`_
+
+.. }}}
+.. sphinxtogitdub のインストール{{{
+
+sphinxtogitdub のインストール
+------------------------------
+
+Sphinx で生成したドキュメントをそのまま公開すると、スタイルシートなど静的ファイルへのリンクが切れてしまいます。
+静的ファイルは、ルートからのパスを想定しているためです。
+html 生成時にリンクを修正してくれるプラグインが公開されています。
+sphinxtogithub を利用すると、 Github Pages 用のリンクに修正してくれます。
+
+sphinxtogithub をインストールするには easy_install を使用します。
+easy_install は Ubuntu では python-setuptools に梱包されています。
+
+:: 
+
+  $ sudo apt-get install python-setuptools
+
+easy_install を使って sphinxtogithub をインストールします。
+
+::
+
+  $ sudo easy_install -ZU sphinxtogithub
+
+sphinxtogithub は /usr/local/bin /usr/local/lib/python2.7/dist-packages/ にインストールされます。
+
+Sphinx の設定ファイル conf.py の extensions に sphinxtogithub を追加して有効にします。
+
+::
+
+  extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinxtogithub']
+
+make html でプロジェクトを生成しなおすと、Github Pages 対応ができます。
+
+.. }}}
 .. 参考サイト{{{
 
 参考サイト
 ------------------------------
 
-* `Scientific Linuxで自宅サーバー構築 <http://scientificsrv.com/>`_
-* `Scientific Linux 6 - ダウンロード ： Server World <http://www.server-world.info/query?os=Scientific_Linux_6&p=download>`_
-* `2ch-Linux-Beginners - InstallationScientificLinuxFAQs <http://www12.atwiki.jp/linux2ch/pages/36.html>`_
-* `Scientific Linux 6｜カスタムOSインストールガイド｜さくらのVPS｜さくらインターネット公式サポートサイト <http://support.sakura.ad.jp/manual/vps/mainte/custom_scientificlinux.html>`_
-* `Scientific Linux » sa-sa-ki.jpのblog <http://www.sa-sa-ki.jp/blog/category/os/scientificlinux/>`_
+* `michaeljones/sphinx-to-github <https://github.com/michaeljones/sphinx-to-github>`_
+* `Hosting your Sphinx docs in Github - Luca Sbardella <http://lucasbardella.com/report/hosting-your-sphinx-docs-in-github/>`_
 
 .. }}}
-
 .. {{{
 
+-----------------------------------------
 
 .. }}}
-
-::
-
-Global setup:
- Set up git
-  git config --global user.name "n_nkmr"
-  git config --global user.email n.nkmrg@gmail.com
-Add your public key
-      
-Next steps:
-  mkdir nnkmr-sphinx
-  cd nnkmr-sphinx
-  git init
-  touch README
-  git add README
-  git commit -m 'first commit'
-  git remote add origin git@github.com:nnkmr/nnkmr-sphinx.git
-  git push -u origin master
-      
-Existing Git Repo?
-  cd existing_git_repo
-  git remote add origin git@github.com:nnkmr/nnkmr-sphinx.git
-  git push -u origin master
-      
-Importing a Subversion Repo?
-  Check out the guide for step by step instructions.
-      
-When you're done:
-  Continue
-
-
-
-
-.. {{{
-
-
-.. }}}
-
 .. vim syntax sugars{{{
    vim:set ft=rst foldmethod=marker:
    }}}
-

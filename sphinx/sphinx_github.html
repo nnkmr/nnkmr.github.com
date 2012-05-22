@@ -59,64 +59,87 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">May 14, 2012</td>
+<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">May 22, 2012</td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="id1">
 <h2>はじめに<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Scientific Linux (SL) は、CentOS や Oracle Linux と同様に Red Hat Enterprise Linux (RHEL) 互換の Linux ディストリビューションです。
-RHEL のソースRPM (SRPM) から RedHat 社の商標に関する部分を削除し、再コンパイルされたものが無償で公開されています。
-フェルミ国立加速器研究所（Fermi National Accelerator Laboratory）及び欧州原子核研究機構（CERN）で開発されています。
-両研究機関のサーバー・ワークステーションは SL で構成されており、開発が突然終了するような可能性は低いため、リリースが遅れていた CentOS の代替として最近注目されています。</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.scientificlinux.org/">Scientific Linux (公式サイト)</a></li>
-<li><a class="reference external" href="http://en.wikipedia.org/wiki/Scientific_Linux">Scientific Linux - Wikipedia (English)</a></li>
-<li><a class="reference external" href="http://ja.wikipedia.org/wiki/Scientific_Linux">Scientific Linux - Wikipedia (日本語)</a></li>
-<li><a class="reference external" href="http://distrowatch.com/table.php?distribution=scientific">DistroWatch.com: Scientific Linux</a></li>
-<li><a class="reference external" href="http://listserv.fnal.gov/scripts/wa.exe?A0=scientific-linux-devel&amp;T=0">Mailing List Archives of SCIENTIFIC-LINUX-DEVEL&#64;LISTSERV.FNAL.GOV</a></li>
-<li><a class="reference external" href="https://ribf.riken.jp/comp/tips/SL3.html">Scientific Linux Tips</a></li>
-<li><a class="reference external" href="http://gihyo.jp/admin/serial/01/ubuntu-recipe/0217">Ubuntu Weekly Recipe：第217回　新年度特別企画・Red HatユーザーのためのUbuntuパッケージ管理の心得｜gihyo.jp … 技術評論社</a></li>
-</ul>
+<p><a class="reference external" href="http://pages.github.com/">GitHub Pages</a> に Sphinx で生成したドキュメントを公開する方法です。</p>
 </div>
 <div class="section" id="id2">
-<h2>参考サイト<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>GitHub Pagesを用意します<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="http://scientificsrv.com/">Scientific Linuxで自宅サーバー構築</a></li>
-<li><a class="reference external" href="http://www.server-world.info/query?os=Scientific_Linux_6&amp;p=download">Scientific Linux 6 - ダウンロード ： Server World</a></li>
-<li><a class="reference external" href="http://www12.atwiki.jp/linux2ch/pages/36.html">2ch-Linux-Beginners - InstallationScientificLinuxFAQs</a></li>
-<li><a class="reference external" href="http://support.sakura.ad.jp/manual/vps/mainte/custom_scientificlinux.html">Scientific Linux 6｜カスタムOSインストールガイド｜さくらのVPS｜さくらインターネット公式サポートサイト</a></li>
-<li><a class="reference external" href="http://www.sa-sa-ki.jp/blog/category/os/scientificlinux/">Scientific Linux » sa-sa-ki.jpのblog</a></li>
+<li><a class="reference external" href="http://help.github.com/pages/">Help.GitHub - GitHub Pages</a></li>
 </ul>
-<dl class="docutils">
-<dt>Global setup:</dt>
-<dd><dl class="first last docutils">
-<dt>Set up git</dt>
-<dd>git config &#8211;global user.name &#8220;n_nkmr&#8221;
-git config &#8211;global user.email <a class="reference external" href="mailto:n&#46;nkmrg&#37;&#52;&#48;gmail&#46;com">n<span>&#46;</span>nkmrg<span>&#64;</span>gmail<span>&#46;</span>com</a></dd>
-</dl>
-</dd>
-</dl>
-<p>Add your public key</p>
-<dl class="docutils">
-<dt>Next steps:</dt>
-<dd>mkdir nnkmr-sphinx
-cd nnkmr-sphinx
-git init
-touch README
-git add README
-git commit -m &#8216;first commit&#8217;
-git remote add origin <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:nnkmr/nnkmr-sphinx.git
-git push -u origin master</dd>
-<dt>Existing Git Repo?</dt>
-<dd>cd existing_git_repo
-git remote add origin <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:nnkmr/nnkmr-sphinx.git
-git push -u origin master</dd>
-<dt>Importing a Subversion Repo?</dt>
-<dd>Check out the guide for step by step instructions.</dd>
-<dt>When you&#8217;re done:</dt>
-<dd>Continue</dd>
-</dl>
+<p>の作成方法に従えば、簡単に GitHub Pages を作成することができます。</p>
+<ul class="simple">
+<li>username.github.com のレポジトリを作成します</li>
+<li>master ブランチに index.html をコミットします</li>
+</ul>
+<p>最初のコミットは 10 分ぐらいで自動的に <a class="reference external" href="http://username.github.com/">http://username.github.com/</a> に公開されます。</p>
+<div class="highlight-python"><pre>$ mkdir nnkmr.github.com
+$ cd nnkmr.github.com
+$ git init
+$ vi index.html
+$ git add index.html
+$ git commit -m 'first commit'
+$ git remote add origin git@github.com:nnkmr/nnkmr.github.com.git
+$ git push -u origin master</pre>
+</div>
+<p><a class="reference external" href="http://nnkmr.github.com/">http://nnkmr.github.com/</a> に公開されます。</p>
+<p>Github Pages では各リポジトリごとにプロジェクトページを作成することもできます。
+各プロジェクトごとにページを作成することでマニュアルなどの公開が便利にできます。</p>
+</div>
+<div class="section" id="sphinx">
+<h2>sphinx を用意する<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx-users.jp/gettingstarted/index.html">Sphinxをはじめよう :: Sphinx-users.jp</a></li>
+</ul>
+<p>Ubuntu には sphinx のパッケージが用意されていて、簡単にインストールすることができます。</p>
+<div class="highlight-python"><pre>$ sudo apt-get install python-sphinx</pre>
+</div>
+<p>Sphinxでプロジェクトを作成するには、以下のようにタイプします。</p>
+<div class="highlight-python"><pre>$ sphinx-quickstart</pre>
+</div>
+<p>いくつか質問されますが、必須で回答しなければならないのは、次の項目です。</p>
+<ul class="simple">
+<li>プロジェクト名: n_nkmr&#8217;s Doc</li>
+<li>バージョン番号: 0.0.1</li>
+<li>著者の名前: n_nkmr</li>
+</ul>
+<p>後はEnterキーだけで大丈夫です。</p>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx-users.jp/gettingstarted/sphinxquickstart.html">sphinx-quickstartの詳細説明 :: ドキュメンテーションツール スフィンクス Sphinx-users.jp</a></li>
+</ul>
+</div>
+<div class="section" id="sphinxtogitdub">
+<h2>sphinxtogitdub のインストール<a class="headerlink" href="#sphinxtogitdub" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx で生成したドキュメントをそのまま公開すると、スタイルシートなど静的ファイルへのリンクが切れてしまいます。
+静的ファイルは、ルートからのパスを想定しているためです。
+html 生成時にリンクを修正してくれるプラグインが公開されています。
+sphinxtogithub を利用すると、 Github Pages 用のリンクに修正してくれます。</p>
+<p>sphinxtogithub をインストールするには easy_install を使用します。
+easy_install は Ubuntu では python-setuptools に梱包されています。</p>
+<div class="highlight-python"><pre>$ sudo apt-get install python-setuptools</pre>
+</div>
+<p>easy_install を使って sphinxtogithub をインストールします。</p>
+<div class="highlight-python"><pre>$ sudo easy_install -ZU sphinxtogithub</pre>
+</div>
+<p>sphinxtogithub は /usr/local/bin /usr/local/lib/python2.7/dist-packages/ にインストールされます。</p>
+<p>Sphinx の設定ファイル conf.py の extensions に sphinxtogithub を追加して有効にします。</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span> <span class="s">&#39;sphinx.ext.doctest&#39;</span><span class="p">,</span> <span class="s">&#39;sphinxtogithub&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>make html でプロジェクトを生成しなおすと、Github Pages 対応ができます。</p>
+</div>
+<div class="section" id="id3">
+<h2>参考サイト<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/michaeljones/sphinx-to-github">michaeljones/sphinx-to-github</a></li>
+<li><a class="reference external" href="http://lucasbardella.com/report/hosting-your-sphinx-docs-in-github/">Hosting your Sphinx docs in Github - Luca Sbardella</a></li>
+</ul>
+<hr class="docutils" />
 </div>
 </div>
 
@@ -130,7 +153,10 @@ git push -u origin master</dd>
   <ul>
 <li><a class="reference internal" href="#">GitHub で Sphinx</a><ul>
 <li><a class="reference internal" href="#id1">はじめに</a></li>
-<li><a class="reference internal" href="#id2">参考サイト</a></li>
+<li><a class="reference internal" href="#id2">GitHub Pagesを用意します</a></li>
+<li><a class="reference internal" href="#sphinx">sphinx を用意する</a></li>
+<li><a class="reference internal" href="#sphinxtogitdub">sphinxtogitdub のインストール</a></li>
+<li><a class="reference internal" href="#id3">参考サイト</a></li>
 </ul>
 </li>
 </ul>

@@ -9,17 +9,7 @@ Sphinx
 
 Sphinx は Phython のドキュメントを作成するために作られたツールです。
 Georg Brandlによって開発され、BSDライセンスのもとで公開されています。
-reStructuredText のソースで作成され、Sphinxを使って作られています!
-
-* `Sphinx (本家) <http://sphinx.pocoo.org/>`_
-* `Sphinx-Users.jp :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/>`_
-
-.. }}}
-
-.. {{{各種設定・利用方法
-
-各種設定・利用方法
-------------------------------
+reStructuredText のソースで作成され、Sphinxを使って作られています。
 
 .. }}}
 
@@ -37,7 +27,6 @@ reStructuredText のソースで作成され、Sphinxを使って作られてい
 * `Sphinx-Users.jp :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/>`_
 
 .. }}}
-
 .. {{{
 
 ------------------------------
@@ -47,4 +36,3 @@ reStructuredText のソースで作成され、Sphinxを使って作られてい
 .. vim syntax sugars{{{
    vim:set ft=rst foldmethod=marker:
    }}}
-

@@ -1,4 +1,4 @@
-Scientific Linux
+Temlate
 ==============================
 :更新日付: |today|
 
@@ -7,18 +7,12 @@ Scientific Linux
 はじめに
 ------------------------------
 
-Scientific Linux (SL) は、CentOS や Oracle Linux と同様に Red Hat Enterprise Linux (RHEL) 互換の Linux ディストリビューションです。
-RHEL のソースRPM (SRPM) から RedHat 社の商標に関する部分を削除し、再コンパイルされたものが無償で公開されています。
-フェルミ国立加速器研究所（Fermi National Accelerator Laboratory）及び欧州原子核研究機構（CERN）で開発されています。
-両研究機関のサーバー・ワークステーションは SL で構成されており、開発が突然終了するような可能性は低いため、リリースが遅れていた CentOS の代替として最近注目されています。
+Sphinx は Phython のドキュメントを作成するために作られたツールです。
+Georg Brandlによって開発され、BSDライセンスのもとで公開されています。
+reStructuredText のソースで作成され、Sphinxを使って作られています。
 
-* `Scientific Linux (公式サイト) <http://www.scientificlinux.org/>`_
-* `Scientific Linux - Wikipedia (English) <http://en.wikipedia.org/wiki/Scientific_Linux>`_
-* `Scientific Linux - Wikipedia (日本語) <http://ja.wikipedia.org/wiki/Scientific_Linux>`_
-* `DistroWatch.com: Scientific Linux <http://distrowatch.com/table.php?distribution=scientific>`_
-* `Mailing List Archives of SCIENTIFIC-LINUX-DEVEL@LISTSERV.FNAL.GOV <http://listserv.fnal.gov/scripts/wa.exe?A0=scientific-linux-devel&T=0>`_
-* `Scientific Linux Tips <https://ribf.riken.jp/comp/tips/SL3.html>`_
-* `Ubuntu Weekly Recipe：第217回　新年度特別企画・Red HatユーザーのためのUbuntuパッケージ管理の心得｜gihyo.jp … 技術評論社 <http://gihyo.jp/admin/serial/01/ubuntu-recipe/0217>`_
+* `Sphinx (本家) <http://sphinx.pocoo.org/>`_
+* `Sphinx-Users.jp :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/>`_
 
 .. }}}
 
@@ -32,7 +26,7 @@ RHEL のソースRPM (SRPM) から RedHat 社の商標に関する部分を削�
 .. toctree::
    :maxdepth: 2
 
-   sphinx_s3
+   sphinx_github
 
 .. 参考サイト{{{
 
@@ -46,7 +40,6 @@ RHEL のソースRPM (SRPM) から RedHat 社の商標に関する部分を削�
 * `Scientific Linux » sa-sa-ki.jpのblog <http://www.sa-sa-ki.jp/blog/category/os/scientificlinux/>`_
 
 .. }}}
-
 .. {{{
 
 ------------------------------
