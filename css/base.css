@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+/* リセット {{{ */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	padding: 0;
+	margin: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset,img {
+	border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-weight: normal;
+	font-style: normal;
+}
+ol,ul {
+	list-style: none;
+}
+caption,th {
+	text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	font-size: 100%;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym {
+	border: 0;
+}
+
+/* }}} */
+/* 全体 {{{ */
+
+body {
+  font:13px "ヒラギノ角ゴ Pro W3",Meiryo,"ＭＳ Ｐゴシック", helvetica, arial, sans-serif;
+	_font-family: "ＭＳ Ｐゴシック", helvetica, arial, sans-serif;
+  *font-size: small;
+  *font: x-small;
+	background-color: #ebebeb;
+}
+table {
+  font-size:inherit;
+  font:100%;
+}
+
+a {
+	color: #265b97;
+	text-decoration: underline;
+	outline: 0;
+}
+a:hover {
+	text-decoration: none;
+	color: #E96F00;
+}
+a img {
+	border: none;
+}
+
+/* }}} */
+/* ヘッダ {{{ */
+
+#header {
+	position: relative;
+	height: 90px;
+}
+
+/* }}} */
+/* コンテナ {{{ */
+
+#container {
+	background-color: #fff;
+	width: 860px;
+	margin: 0px auto;
+	padding: 0px;
+	_font-size: 105%;
+}
+
+/* }}} */
+/* 本文 {{{ */ 
+
+#contents {
+	margin: 0 50px;
+}
+#contents h1 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #d1d1d1;
+	margin: 30px 0 30px;
+}
+
+/* }}} */
+/* サイトID {{{ */
+
+#header h2 {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+
+/* }}} */
+/* グローバルナビ {{{ */
+
+#globalNavi {
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+	height: 38px;
+}
+#globalNavi li {
+	float: left;
+}
+#globalNavi li a {
+	display: block;
+	background: no-repeat left top;
+}
+#globalNavi li a:hover {
+	border-color: #000;
+}
+#globalNavi li a img {
+	visibility: visible;
+}
+#globalNavi li a:hover img {
+	visibility: hidden;
+}
+#globalNavi li.gn01 a {
+	background-image: url(../images/gn_01_on.gif);
+}
+#globalNavi li.gn02 a {
+	background-image: url(../images/gn_02_on.gif);
+}
+#globalNavi li.gn03 a {
+	background-image: url(../images/gn_03_on.gif);
+}
+#globalNavi li.gn04 a {
+	background-image: url(../images/gn_04_on.gif);
+}
+#globalNavi li.gn05 a {
+	background-image: url(../images/gn_05_on.gif);
+}
+#globalNavi li.gn06 a {
+	background-image: url(../images/gn_06_on.gif);
+}
+
+/* }}} */
+/* ページ最上部 {{{ */
+
+p.pagetop {
+	margin: 0;
+	text-align: right;
+	border-bottom: 1px solid #d1d1d1;
+	padding: 0 5px 5px 0;
+	height: 20px;
+}
+p.noborder {
+	border: none;
+	margin-bottom: 0px;
+}
+p.pagetop a {
+	display: block;
+	background: url(../images/pagetop_on.gif) no-repeat left top;
+	width: 85px;
+	height: 20px;
+	float: right;
+}
+p.pagetop a:hover {
+	border-color: #000;
+}
+p.pagetop a img {
+	visibility: visible;
+}
+p.pagetop a:hover img {
+	visibility: hidden;
+}
+
+/* }}} */
+/* フッタ {{{ */
+
+#footer {
+	margin: 20px 50px 0px;
+	text-align: right;
+	padding: 0px 0 10px;
+	position: relative;
+}
+#footer p.pagetop {
+	margin: 0 0 8px;
+}
+
+#footer p.privacy {
+	position: absolute;
+	left: 0px;
+	padding: 3px;
+	font-size: 85%;
+}
+
+#footer .footerlogo {
+	display: inline;
+}
+#footer .credit {
+	display: inline;
+	padding-left: 1em;
+	color: #999999;
+	font-size: 93%;
+}
+
+/* }}} */
+
+/* ステップ表示 {{{ */
+#step {
+	margin: 0 auto;
+	width: 660px;
+	margin-bottom: 20px;
+}
+#step li {
+	background: #ececec url(../images/step_bg.gif) no-repeat right center;
+	color: #888;
+	width: 220px;
+	float: left;
+	padding: 5px 0;
+	text-align: center;
+}
+#step li.current {
+	color:#fff;
+	background: #ec8214 url(../images/step_bg2.gif) no-repeat right center;
+	font-weight: bold;
+}
+
+/* }}} */
+/* リード文 {{{ */
+
+.read {
+	margin: 0 50px;
+	line-height: 1.7;
+	/*color: #888;*/
+	margin-bottom: 20px;
+}
+.thanx {
+	padding: 50px;
+}
+.thanx p {
+	text-align: center;
+	margin-bottom: 1.7em;
+}
+
+/* }}} */
+/* キャプション {{{ */
+
+.caption {
+	margin: 0 50px;
+	line-height: 1.7;
+	color: #888;
+	margin-bottom: 5px;
+	font-size: 91%;
+}
+
+/* }}} */
+/* 必須 {{{ */
+
+.required{
+	font-size:85%;
+	color: #ec8214;
+	padding: 0 3px;
+}
+
+/* }}} */
+/* フォーム {{{ */
+
+.form {
+	width: 660px;
+	margin: 0 auto 10px;
+}
+.form table {
+	width:100%;
+	border-top: 1px dotted #d1d1d1;
+}
+.form table th, .form table td {
+	padding: 12px 0;
+	border-bottom: 1px dotted #d1d1d1;
+	vertical-align: top;
+}
+.form table th {
+	white-space: nowrap;
+	width: 1%;
+	padding-right: 1.5em;
+}
+.form table td input, .form table td textarea, .form table td select {
+	padding: 3px;
+	height: auto;
+	font-size: 91%;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid #999;
+	margin: 0;
+}
+.form table td input, .form table td textarea {
+	border: 1px solid #e8e8e8;
+	border-top: 1px solid #999;
+	border-left: 1px solid #aaa;
+	background-color: #f9f9f9;
+}
+.form table td textarea {
+	width: 95%;
+}
+.form table td.radio input {
+	margin-right: 5px;
+	padding: 0;
+	border: none;
+	background-color: #fff;
+}
+.form table td ul {
+	margin-bottom: -5px;
+}
+.form table td li {
+	margin-bottom: 5px;
+}
+.form table td .caption {
+	margin: 5px 0 0;
+}
+
+/* }}} */
+/* 項目別 {{{ */
+
+.codicil {
+	/*color: #888;*/
+	margin: 0 0px 40px;
+	line-height: 1.7;
+}
+
+/* }}} */
+/* 注釈 {{{ */
+
+.notice {
+	list-style: disc;
+	padding: 10px 15px 10px 30px;
+	border: 1px solid #d1d1d1;
+	margin: 15px 50px 10px;
+	line-height: 1.7;
+	/*color: #888;*/
+}
+
+/* }}} */
+/* 送信 {{{ */
+.send {
+	text-align: center;
+	padding: 20px 0;
+}
+
+/* }}} */
