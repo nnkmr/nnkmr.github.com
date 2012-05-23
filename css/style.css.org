@@ -1,0 +1,312 @@
+/**
+ *     phi
+ */
+
+
+/* ---------------------------------------------------------------- */
+/**
+ *     rest
+ */
+* {
+    margin: 0px;
+    padding: 0px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    font-family: "Meiryo", Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/**
+ *     header
+ */
+#header {
+    background: rgb(0, 68, 204);
+    background: -webkit-radial-gradient(70% 50%, circle cover, rgba(255, 255, 255, 1.0) 0%, rgba(255, 255, 255, 0.0) 80%), #0044bb;
+    background: -moz-radial-gradient(70% 50%, circle cover, rgba(255, 255, 255, 1.0) 0%, rgba(255, 255, 255, 0.0) 80%), #0044CC;
+    background: -o-radial-gradient(70% 50%, circle cover, rgba(255, 255, 255, 1.0) 0%, rgba(255, 255, 255, 0.0) 80%), #0044CC;
+    background: radial-gradient(70% 50%, circle cover, rgba(255, 255, 255, 1.0) 0%, rgba(255, 255, 255, 0.0) 80%), #0044CC;
+    box-shadow: 0px 0px 8px 0px #555;
+}
+
+
+#header hgroup
+{
+    width: 1200px;
+    margin: 0px auto;
+    padding-left: 10px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+#header hgroup h1
+{
+    color: white;
+    font-size: 35px;
+    font-style: italic;
+    text-shadow: 2px 2px 4px #444;
+}
+
+
+
+/**
+ *     nav
+ */
+#nav
+{
+    margin-top:20px;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: linear-gradient(top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.9) 100%);
+    border-top: 1px solid rgb(227, 224, 213);
+    border-bottom: 1px solid rgb(227, 224, 213);
+}
+
+#nav .inner
+{
+    width: 1200px;
+    margin:0px auto;
+}
+
+#nav ul
+{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: box;
+    width: 1200px;
+    height: 40px;
+    margin: 0px auto;
+    
+    list-style: none;
+}
+
+#nav ul li
+{
+    text-align: center;
+    border-left: 1px solid rgb(227, 224, 213);
+}
+
+#nav ul li:last-child
+{
+    border-right: 1px solid rgb(227, 224, 213);
+}
+
+#nav ul li a
+{
+    display: block;
+    width: 120px;
+    height: 40px;
+    padding-top: 10px;
+    
+    color: black;
+    -webkit-transition: 250ms;
+    -moz-transition: 250ms;
+    -o-transition: 250ms;
+    -ms-transition: 250ms;
+    transition: 250ms;
+}
+
+#nav ul li a:hover
+{
+    box-shadow: 0px 0px 10px #aaa;
+    background: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/**
+ *     contents
+ */
+#contents {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: box;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    box-pack: center;
+    padding: 20px;
+    width: 100%;
+    min-width: 800px;
+    min-height: 600px;
+    
+}
+
+
+#main {
+    padding: 10px;
+    width: 900px;
+    
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+#main .entry {
+    margin: 5px;
+}
+
+#main .entry h1 {
+    font-size: 30px;
+}
+
+#main .entry h2 {
+    font-size: 20px;
+}
+
+#main .entry p
+{
+    padding-bottom: 15px;
+}
+
+#side {
+    padding: 10px;
+    width: 300px;
+    
+    border-right: 1px solid #ccc;
+}
+
+#side .side-box {
+    margin: 10px 5px 25px;
+    border-radius: 10px 0px;
+    box-shadow: 0px 0px 8px 0px #aaa;
+    
+    -webkit-transition: 250ms;
+    -moz-transition: 250ms;
+    -o-transition: 250ms;
+    -ms-transition: 250ms;
+    transition: 250ms;
+}
+
+#side .side-box:hover
+{
+    box-shadow: 0px 0px 16px 2px #aaf;
+}
+
+#side .side-box h1 {
+    padding: 5px 15px;
+    background-color: #0066FF;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), #0066FF;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), #0066FF;
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), #0066FF;
+    background: linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), #0066FF;
+    border-radius: 10px 0px 0px 0px;
+    
+    color: white;
+    font-size: 15px;
+    /*
+    text-shadow: 0px 0px 4px rgb(20, 20, 20), 0px 0px 4px rgb(20, 20, 20);
+    */
+}
+
+#side .side-box .contents
+{
+    padding: 10px;
+}
+
+#side .side-box .contents ul,
+#side .side-box .contents ol
+{
+    list-style: none;
+}
+
+#side .side-box .contents li
+{
+    margin: 4px 0px;
+    border-bottom: 1px dashed #aaa;
+}
+
+
+
+
+/**
+ *     footer
+ */
+#footer {
+    min-height:300px;
+    padding-top: 10px;
+    background: rgb(0, 68, 204);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 1.0) 100%), rgb(0, 68, 204);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 1.0) 100%), rgb(0, 68, 204);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 1.0) 100%), rgb(0, 68, 204);
+    background: linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 1.0) 100%), rgb(0, 68, 204);
+    box-shadow: 0px 0px 8px 0px #555;
+    
+    color: white;
+    text-align: center;
+}
+
+#footer .footer-links ul,
+#footer .footer-links ol
+{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: box;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    box-pack: center;
+    list-style: none;
+}
+
+#footer .footer-links ul li
+{
+    text-align: center;
+    padding: 0px 10px;
+}
+
+#footer .footer-links ul li:not(:last-child),
+#footer .footer-links ol li:not(:last-child)
+{
+    border-right: 1px solid white;
+}
+
+#footer a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
