@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Redmine &mdash; n_nkmr&#39;s wiki 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="static/default.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/translations.js"></script>
+    <link rel="top" title="n_nkmr&#39;s wiki 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="テスト" href="test.html" />
+    <link rel="prev" title="GitHub で Sphinx" href="sphinx_github.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="test.html" title="テスト"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphinx_github.html" title="GitHub で Sphinx"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="redmine">
+<h1>Redmine<a class="headerlink" href="#redmine" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">2012 年 06 月 19 日</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h2>はじめに<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Redmine は Ruby on Rails で開発されている、Webベースのプロジェクト管理ソフトウェアです。
+バグ管理システム(BTS: Bug Tracking System)や課題管理システム(ITS: Issue Tracking System)として使用されます。
+チケット駆動開発(TiDD: Ticket Driven Development)を実践するのに適してます。</p>
+</div>
+<div class="section" id="id3">
+<h2>インストール手順<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Redmine 2.0.1 を Scientific Linux 6.2 に RVM（Ruby Version Manager）を使用してインストールする手順です。
+以下の環境で構築します。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Redmine</td>
+<td>trunk(2.0.1)</td>
+</tr>
+<tr class="row-even"><td>OS</td>
+<td>Scientific Linux 6.2</td>
+</tr>
+<tr class="row-odd"><td>Ruby</td>
+<td>1.9.3</td>
+</tr>
+<tr class="row-even"><td>Ruby on Rails</td>
+<td>3.2.3</td>
+</tr>
+<tr class="row-odd"><td>Ruby Gems</td>
+<td>1.8.23</td>
+</tr>
+<tr class="row-even"><td>DB</td>
+<td>PostgreSQL</td>
+</tr>
+<tr class="row-odd"><td>Web Server</td>
+<td>Apache</td>
+</tr>
+<tr class="row-even"><td>Passenger</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>RVM を使用して ruby や rails は複数使用できるようにしておきます。</p>
+</div>
+<div class="section" id="scientific-linux">
+<h2>Scientific Linux の設定<a class="headerlink" href="#scientific-linux" title="Permalink to this headline">¶</a></h2>
+<p>Scientific Linux 6.2 を準備します。</p>
+<div class="section" id="yum">
+<h3>YUM の設定<a class="headerlink" href="#yum" title="Permalink to this headline">¶</a></h3>
+<p>fastestmirrorとはパッケージダウンロードサイト(ミラーサイト)より最速サイトを自動検知して、そのサイトよりパッケージをダウンロードするプラグインです。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># yum -y install yum-plugin-fastestmirror</span>
+</pre></div>
+</div>
+<p>EPELリポジトリを導入して、標準リポジトリで提供されないパッケージをyumでインストールできるようにします。
+なお、標準リポジトリとEPELリポジトリの両方で提供されるパッケージについて、yum-prioritiesプラグインを導入して標準リポジトリのパッケージがEPELリポジトリのパッケージで上書きされてしまわないようにします。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># yum install yum-priorities</span>
+</pre></div>
+</div>
+<div class="highlight-diff"><div class="highlight"><pre><span class="gh">diff --git a/yum.repos.d/sl.repo b/yum.repos.d/sl.repo</span>
+<span class="gh">index ed1ef0c..7c15122 100644</span>
+<span class="gd">--- a/yum.repos.d/sl.repo</span>
+<span class="gi">+++ b/yum.repos.d/sl.repo</span>
+<span class="gu">@@ -8,6 +8,7 @@ baseurl=http://ftp.scientificlinux.org/linux/scientific/$releasever/$basearch/os</span>
+ enabled=1
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+<span class="gi">+priority=1</span>
+
+ [sl-security]
+ name=Scientific Linux $releasever - $basearch - security updates
+<span class="gu">@@ -19,6 +20,7 @@ baseurl=http://ftp.scientificlinux.org/linux/scientific/$releasever/$basearch/up</span>
+ enabled=1
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+<span class="gi">+priority=1</span>
+
+
+ [sl-source]
+ @@ -30,3 +32,4 @@ baseurl=http://ftp.scientificlinux.org/linux/scientific/$releasever/SRPMS/
+ enabled=0
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
+<span class="gi">+priority=1</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># yum install epel-release</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="etckeeper">
+<h3>etckeeper のインストール<a class="headerlink" href="#etckeeper" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># yum install etckeeper git</span>
+</pre></div>
+</div>
+<p>etckeeper は EPEL リポジトリからインストールされます。
+バージョン管理ツールは Git を使用します。</p>
+<p>/etc/etckeeper/etckeeper.conf</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># The VCS to use.</span>
+<span class="c">#VCS=&quot;hg&quot;</span>
+<span class="nv">VCS</span><span class="o">=</span><span class="s2">&quot;git&quot;</span>
+<span class="c">#VCS=&quot;bzr&quot;</span>
+<span class="c">#VCS=&quot;darcs&quot;</span>
+</pre></div>
+</div>
+<p>最初に以下の作業を行なっておけば、cron によって日1回はコミットされます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># cd /etc</span>
+<span class="c"># etckeeper init</span>
+<span class="c"># etckeeper commit &quot;First commit&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ssh">
+<h3>ssh の設定<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>diff --git a/ssh/sshd_config b/ssh/sshd_config
+index 0f94fe3..7fa5a95 100644
+--- a/ssh/sshd_config
++++ b/ssh/sshd_config
+@@ -63,7 +63,7 @@ SyslogFacility AUTHPRIV
+ <span class="c"># To disable tunneled clear text passwords, change to no here!</span>
+ <span class="c">#PasswordAuthentication yes</span>
+ <span class="c">#PermitEmptyPasswords no</span>
+-PasswordAuthentication yes
++PasswordAuthentication no
+</pre></div>
+</div>
+</div>
+<div class="section" id="selinux">
+<h3>SELinuxを無効にする<a class="headerlink" href="#selinux" title="Permalink to this headline">¶</a></h3>
+<p>/etc/selinux/config で SELinux を無効にします。</p>
+<div class="highlight-bash"><div class="highlight"><pre>diff --git a/selinux/config b/selinux/config
+index 3a77ea4..ff7b8ac 100644
+--- a/selinux/config
++++ b/selinux/config
+@@ -4,7 +4,7 @@
+ <span class="c">#     enforcing - SELinux security policy is enforced.</span>
+ <span class="c">#     permissive - SELinux prints warnings instead of enforcing.</span>
+ <span class="c">#     disabled - No SELinux policy is loaded.</span>
+-SELINUX<span class="o">=</span>enforcing
++SELINUX<span class="o">=</span>disabled
+ <span class="c"># SELINUXTYPE= can take one of these two values:</span>
+ <span class="c">#     targeted - Targeted processes are protected,</span>
+ <span class="c">#     mls - Multi Level Security protection.</span>
+</pre></div>
+</div>
+<p>編集後、OS を再起動する必要があります。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># reboot</span>
+</pre></div>
+</div>
+<p>再起動後、getenforce コマンドで SELinux が無効になっていることを確認します。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>getenforce
+Disabled
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>ファイアウォールの設定<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>/etc/sysconfig/iptables で HTTP(ポート80) への接続を許可します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>diff --git a/sysconfig/iptables b/sysconfig/iptables
+index 4ab84e5..7ec0236 100644
+--- a/sysconfig/iptables
++++ b/sysconfig/iptables
+@@ -8,6 +8,7 @@
+ -A INPUT -p icmp -j ACCEPT
+ -A INPUT -i lo -j ACCEPT
+ -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
++-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+ -A INPUT -j REJECT --reject-with icmp-host-prohibited
+ -A FORWARD -j REJECT --reject-with icmp-host-prohibited
+ COMMIT
+</pre></div>
+</div>
+<p>編集後、iptables を再起動する必要があります。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># service iptables restart</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="apache">
+<h3>Apache の起動<a class="headerlink" href="#apache" title="Permalink to this headline">¶</a></h3>
+<p>Apache を起動させます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># service httpd start</span>
+</pre></div>
+</div>
+<p>Apache を自動起動するように設定します。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># chkconfig httpd on</span>
+<span class="c"># chkconfig --list | grep httpd</span>
+httpd            0:off 1:off 2:on  3:on  4:on  5:on  6:off
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="c">
+<h4>開発ツール(Cコンパイラ等)<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># yum groupinstall &quot;Development Tools&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rubypassenger">
+<h4>RubyとPassengerのビルドに必要なヘッダファイルなど<a class="headerlink" href="#rubypassenger" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># yum install openssl-devel readline-devel zlib-devel curl-devel libyaml-devel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mysql">
+<h4>MySQLとヘッダファイル<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># yum install mysql-server mysql-devel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h4>Apacheとヘッダファイル<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># yum install httpd httpd-devel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="imagemagick">
+<h4>ImageMagickとヘッダファイル<a class="headerlink" href="#imagemagick" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># yum install ImageMagick ImageMagick-devel</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rvm-ruby-rails">
+<h2>RVM による Ruby, Rails のバージョン管理<a class="headerlink" href="#rvm-ruby-rails" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Ruby Version Manager</li>
+<li>複数のRubyのバージョンを管理できる</li>
+<li>root権限無しにrubyがインストールできる</li>
+<li>複数のRubyを使い分けるための仕組み。</li>
+<li>ユーザーディレクトリ内部にインストールするのでsudoしなくて良い。</li>
+</ul>
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+</div>
+<div class="section" id="id6">
+<h2>参考サイト<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.redmine.org/">Redmine</a></li>
+<li><a class="reference external" href="http://redmine.jp/">Redmine.JP</a></li>
+<li><a class="reference external" href="http://blog.redmine.jp/">Redmine.JP Blog</a></li>
+<li><a class="reference external" href="https://rvm.io//">RVM: Ruby Version Manager - RVM Ruby Version Manager - Documentation</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Redmine</a><ul>
+<li><a class="reference internal" href="#id1">はじめに</a></li>
+<li><a class="reference internal" href="#id3">インストール手順</a></li>
+<li><a class="reference internal" href="#scientific-linux">Scientific Linux の設定</a><ul>
+<li><a class="reference internal" href="#yum">YUM の設定</a></li>
+<li><a class="reference internal" href="#etckeeper">etckeeper のインストール</a></li>
+<li><a class="reference internal" href="#ssh">ssh の設定</a></li>
+<li><a class="reference internal" href="#selinux">SELinuxを無効にする</a></li>
+<li><a class="reference internal" href="#id4">ファイアウォールの設定</a></li>
+<li><a class="reference internal" href="#apache">Apache の起動</a><ul>
+<li><a class="reference internal" href="#c">開発ツール(Cコンパイラ等)</a></li>
+<li><a class="reference internal" href="#rubypassenger">RubyとPassengerのビルドに必要なヘッダファイルなど</a></li>
+<li><a class="reference internal" href="#mysql">MySQLとヘッダファイル</a></li>
+<li><a class="reference internal" href="#id5">Apacheとヘッダファイル</a></li>
+<li><a class="reference internal" href="#imagemagick">ImageMagickとヘッダファイル</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rvm-ruby-rails">RVM による Ruby, Rails のバージョン管理</a></li>
+<li><a class="reference internal" href="#id6">参考サイト</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="sphinx_github.html"
+                        title="前の章へ">GitHub で Sphinx</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="test.html"
+                        title="次の章へ">テスト</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/redmine.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="test.html" title="テスト"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphinx_github.html" title="GitHub で Sphinx"
+             >previous</a> |</li>
+        <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, n_nkmr.
+      このドキュメントは <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3 で生成しました。
+    </div>
+  </body>
+</html>

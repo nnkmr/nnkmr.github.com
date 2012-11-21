@@ -33,8 +33,8 @@
       <h3>ナビゲーション</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="総合索引"
-             accesskey="I">索引</a></li>
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -45,21 +45,21 @@
           <div class="body">
             
   <div class="section" id="vim">
-<h1>Vim<a class="headerlink" href="#vim" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>Vim<a class="headerlink" href="#vim" title="Permalink to this headline">¶</a></h1>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">2012 年 05 月 22 日</td>
+<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">June 19, 2012</td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="id1">
-<h2>はじめに<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>はじめに<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Vim（ヴィムまたはヴィアイエム）は、vi から派生し、発展した高機能なテキストエディタです。</p>
 </div>
 <div class="section" id="vimrc">
-<h2>vimrc<a class="headerlink" href="#vimrc" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>vimrc<a class="headerlink" href="#vimrc" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><pre>" .vimrc
 " 更新日: 2012年  5月 22日 火曜日 17:21:12 JST
 
@@ -184,7 +184,7 @@ set foldmethod=marker
 </div>
 </div>
 <div class="section" id="id3">
-<h2>画像分割<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>画像分割<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>水平分割　 :sp filename</li>
 <li>垂直分割　 :vsp filename</li>
@@ -192,7 +192,7 @@ set foldmethod=marker
 </ul>
 </div>
 <div class="section" id="id4">
-<h2>バッファ移動<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>バッファ移動<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>別ファイルを開く　:e filename</li>
 <li>1つ前のバッファ　 :bp</li>
@@ -200,7 +200,7 @@ set foldmethod=marker
 </ul>
 </div>
 <div class="section" id="id5">
-<h2>折り畳み<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>折り畳み<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>よく使うコマンド</li>
 </ul>
@@ -252,7 +252,7 @@ set foldmethod=marker
 </table>
 </div>
 <div class="section" id="id6">
-<h2>参考サイト<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>参考サイト<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://www.vim.org/">welcome home : vim online</a></li>
 <li><a class="reference external" href="http://vim-jp.org/vimdoc-ja/">Vim documentation: help</a></li>
@@ -260,6 +260,87 @@ set foldmethod=marker
 <li><a class="reference external" href="http://www.kaoriya.net/">KaoriYa</a></li>
 </ul>
 <hr class="docutils" />
+<div class="section" id="bash">
+<h3>さくらのレンタルサーバで bash を標準にする<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>chsh -s /usr/local/bin/bash
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bash-profile-bashrc">
+<h1>.bash-profile と .bashrc を作る<a class="headerlink" href="#bash-profile-bashrc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bash-profile">
+<h2>&#8221; .bash_profile &#8220;<a class="headerlink" href="#bash-profile" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># .bash_profile</span>
+
+<span class="c"># Get the aliases and functions</span>
+<span class="k">if</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span>; <span class="k">then</span>
+ . ~/.bashrc
+<span class="k">fi</span>
+
+<span class="c"># User specific environment and startup programs</span>
+
+<span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/bin
+<span class="nb">export </span>PATH
+
+<span class="nv">LANG</span><span class="o">=</span>ja_JP.UTF-8
+<span class="nb">export </span>LANG
+</pre></div>
+</div>
+</div>
+<div class="section" id="bashrc">
+<h2>.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># .bashrc</span>
+
+<span class="c"># Source global definitions</span>
+<span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span>; <span class="k">then</span>
+ . /etc/bashrc
+<span class="k">fi</span>
+
+<span class="c"># User specific aliases and functions</span>
+<span class="c">#export LANG=ja_JP.UTF-8</span>
+
+<span class="c"># path</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$PATH&quot;</span>:/usr/sbin:/sbin
+</pre></div>
+</div>
+<div class="section" id="id7">
+<h3>さくらのレンタルサーバで vim をインストールする<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>さくらのレンタルサーバは vi がうまい事 utf8 を扱えないので、vimを入れて
+utf8対応することにする。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h1>vim のインストール<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-bash"><div class="highlight"><pre>mkdir -p ~/local/src
+<span class="nb">cd</span> ~/local/src
+wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
+bunzip2 vim-7.3.tar.bz2
+tar xvzf vim-7.3.tar
+./configure --enable-multibyte --enable-xim --enable-fontset --with-features<span class="o">=</span>big --prefix<span class="o">=</span><span class="nv">$HOME</span>/local
+make
+make install
+</pre></div>
+</div>
+</div>
+<div class="section" id="vim-bash">
+<h1>vim をbashに登録する<a class="headerlink" href="#vim-bash" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># .bashrc</span>
+
+<span class="c"># Source global definitions</span>
+<span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span>; <span class="k">then</span>
+ . /etc/bashrc
+<span class="k">fi</span>
+
+<span class="c"># User specific aliases and functions</span>
+<span class="c">#export LANG=ja_JP.UTF-8</span>
+
+<span class="c"># path</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$PATH&quot;</span>:/usr/sbin:/sbin:<span class="nv">$HOME</span>/local/bin
+<span class="nb">alias </span><span class="nv">vi</span><span class="o">=</span><span class="s1">&#39;vim&#39;</span>
+</pre></div>
 </div>
 </div>
 
@@ -277,9 +358,22 @@ set foldmethod=marker
 <li><a class="reference internal" href="#id3">画像分割</a></li>
 <li><a class="reference internal" href="#id4">バッファ移動</a></li>
 <li><a class="reference internal" href="#id5">折り畳み</a></li>
-<li><a class="reference internal" href="#id6">参考サイト</a></li>
+<li><a class="reference internal" href="#id6">参考サイト</a><ul>
+<li><a class="reference internal" href="#bash">さくらのレンタルサーバで bash を標準にする</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bash-profile-bashrc">.bash-profile と .bashrc を作る</a><ul>
+<li><a class="reference internal" href="#bash-profile">&#8221; .bash_profile &#8220;</a></li>
+<li><a class="reference internal" href="#bashrc">.bashrc</a><ul>
+<li><a class="reference internal" href="#id7">さくらのレンタルサーバで vim をインストールする</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">vim のインストール</a></li>
+<li><a class="reference internal" href="#vim-bash">vim をbashに登録する</a></li>
 </ul>
 
   <h3>このページ</h3>
@@ -308,8 +402,8 @@ set foldmethod=marker
       <h3>ナビゲーション</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="総合索引"
-             >索引</a></li>
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
         <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>

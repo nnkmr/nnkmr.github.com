@@ -1,0 +1,18 @@
+インストール
+==============================
+:更新日付: |today|
+
+.. インストール{{{
+
+* `Index of /pub/Linux/scientific <http://ftp.jaist.ac.jp/pub/Linux/scientific/>`_
+
+.. image:: images/screenshot-0000.png
+  :scale:  40% 
+
+
+.. }}}
+
+.. vim syntax sugars{{{
+   vim:set ft=rst foldmethod=marker:
+   }}}
+
