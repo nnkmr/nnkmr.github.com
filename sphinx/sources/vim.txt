@@ -2,7 +2,7 @@ Vim
 ==============================
 :更新日付: |today|
 
-.. はじめに{{{
+.. はじめに {{{
 
 はじめに
 ------------------------------
@@ -10,7 +10,7 @@ Vim
 Vim（ヴィムまたはヴィアイエム）は、vi から派生し、発展した高機能なテキストエディタです。
 
 .. }}}
-.. 目次{{{
+.. 目次 {{{
 
 .. contents::
   これは目次です
@@ -149,7 +149,7 @@ vimrc
  " }}}
 
 .. }}}
-.. 画像分割{{{
+.. 画像分割 {{{
 
 画像分割
 ------------------------------
@@ -159,7 +159,7 @@ vimrc
 * 画面移動　 C-w hjkl
 
 .. }}}
-.. バッファ移動{{{
+.. バッファ移動 {{{
 
 バッファ移動
 ------------------------------
@@ -169,7 +169,7 @@ vimrc
 * 1つ後のバッファ　 :bn
 
 .. }}}
-.. 折り畳み{{{
+.. 折り畳み {{{
 
 折り畳み
 ------------------------------
@@ -202,7 +202,7 @@ vimrc
 
 
 .. }}}
-.. 参考サイト{{{
+.. 参考サイト {{{
 
 参考サイト
 ------------------------------
@@ -220,4 +220,101 @@ vimrc
 .. }}}
 .. vim syntax sugars{{{
    vim:set ft=rst foldmethod=marker:
-   }}}
+.. }}}
+
+
+==================================================================
+さくらのレンタルサーバで bash を標準にする
+==================================================================
+
+.. code-block:: bash
+
+ chsh -s /usr/local/bin/bash
+
+
+
+.bash-profile と .bashrc を作る
+==================================================================
+
+" .bash_profile "
+-----------------------------
+
+.. code-block:: bash
+
+ # .bash_profile
+ 
+ # Get the aliases and functions
+ if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+ fi
+ 
+ # User specific environment and startup programs
+ 
+ PATH=$PATH:$HOME/bin
+ export PATH
+ 
+ LANG=ja_JP.UTF-8
+ export LANG
+
+
+
+.bashrc
+------------------------
+.. code-block:: bash
+
+ # .bashrc
+ 
+ # Source global definitions
+ if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+ fi
+ 
+ # User specific aliases and functions
+ #export LANG=ja_JP.UTF-8
+ 
+ # path
+ export PATH="$PATH":/usr/sbin:/sbin
+
+
+======================================================
+さくらのレンタルサーバで vim をインストールする
+======================================================
+
+さくらのレンタルサーバは vi がうまい事 utf8 を扱えないので、vimを入れて
+utf8対応することにする。
+
+vim のインストール
+=================================
+
+.. code-block:: bash
+
+ mkdir -p ~/local/src
+ cd ~/local/src
+ wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
+ bunzip2 vim-7.3.tar.bz2
+ tar xvzf vim-7.3.tar
+ ./configure --enable-multibyte --enable-xim --enable-fontset --with-features=big --prefix=$HOME/local
+ make
+ make install
+
+
+
+vim をbashに登録する
+=================================
+
+.. code-block:: bash
+
+ # .bashrc
+ 
+ # Source global definitions
+ if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+ fi
+ 
+ # User specific aliases and functions
+ #export LANG=ja_JP.UTF-8
+ 
+ # path
+ export PATH="$PATH":/usr/sbin:/sbin:$HOME/local/bin
+ alias vi='vim'
+

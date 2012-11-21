@@ -1,0 +1,37 @@
+Amazon Web Services 
+================================================
+:更新日付: |today|
+
+.. はじめに {{{
+
+はじめに
+------------------------------
+
+今や Ubuntu Server を早く簡単に使用してみたい場合、Amazon Web Services (AWS) の Amazon Elastic Compute Cloud(Amazon EC2) を使用する一番です。
+Ubuntu の公式の Amazon Machine Image(AMI) が用意されておりポチッとするだけで始められます。
+また、新規ユーザーには一年間の無料使用枠もあるのでコストを考えずに使用することができます。
+
+* `クラウドサービス無料 利用枠のご案内 | アマゾン ウェブ サービス（AWS 日本語） <http://aws.amazon.com/jp/free/>`_
+* `AWS 無料使用範囲とは - 入門ガイド <http://docs.amazonwebservices.com/ja_jp/gettingstarted/latest/awsgsg-freetier/TestDriveFreeTier.html>`_
+
+.. }}}
+.. 目次 {{{
+
+目次:
+
+.. toctree::
+   :maxdepth: 2
+
+   ubuntu_aws
+
+.. }}}
+.. {{{
+
+
+------------------------------
+
+.. }}}
+
+.. vim syntax sugars {{{
+   vim:set ft=rst foldmethod=marker:
+   }}}

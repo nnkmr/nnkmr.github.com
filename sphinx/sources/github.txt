@@ -1,0 +1,49 @@
+GitHub
+==============================
+:更新日付: |today|
+
+.. はじめに{{{
+
+はじめに
+------------------------------
+
+GitHub（ギットハブ）はソフトウェア開発プロジェクトのための共有ウェブサービスです。
+Gitバージョン管理システムを使用しています。
+Ruby on Rails および Erlang で構築されているようです。 
+主な開発者は
+`Chris Wanstrath (defunkt) <https://twitter.com/#!/defunkt>`_ 、
+`PJ Hyett (pjhyett) <https://twitter.com/#!/pjhyett>`_ 、
+`Tom Preston-Werner (mojombo) <https://twitter.com/#!/mojombo>`_ です。 
+
+.. }}}
+.. 目次{{{
+
+.. contents::
+  これは目次です
+  :local:
+  :depth: 2
+  :backlinks: none
+
+.. }}}
+.. {{{
+
+------------------------------
+
+.. }}}
+.. {{{
+
+------------------------------
+
+.. }}}
+.. 参考サイト{{{
+
+参考サイト
+------------------------------
+
+* `GitHub <https://github.com/>`_
+
+.. }}}
+.. vim syntax sugars{{{
+   vim:set ft=rst foldmethod=marker:
+   }}}
+

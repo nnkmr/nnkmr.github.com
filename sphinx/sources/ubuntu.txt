@@ -1,0 +1,71 @@
+Ubuntu 
+==============================
+:更新日付: |today|
+
+.. はじめに {{{
+
+はじめに
+------------------------------
+
+Ubuntu を思えば長く使ってきました。
+7.04 Feisty Fawn がリリースされる少し前に Vine Linux から乗り換えたので、5 年半ぐらい使っているようです。
+Vine Linux から乗り換える前に仕事で Gentoo を使っていたのがいけなかったと思います。
+当時は PC のマシンスペックも非力だったので、Gentoo はインストールだけでも何日もかかりました。
+それでインストールが簡単な Ubuntu を使用するようになり、Vine Linux より最新のアプリケーションが使用できるので、常用環境も Ubuntu になりました。
+Vine Linux にはあまり不満はなかったのですがね。
+
+.. }}}
+.. 目次 {{{
+
+目次:
+
+.. toctree::
+   :maxdepth: 2
+
+   ubuntu_aws
+
+.. }}}
+.. はじめ方 {{{
+
+はじめ方
+-----------------------------------------
+
+.. }}}
+.. conf.py の設定 {{{
+
+conf.py の設定
+------------------------------
+
+* `ビルド設定ファイル — Sphinx v1.0 (hg) documentation <http://sphinx.shibu.jp/config.html>`_
+
+日本語化
+'''''''''
+
+日付などが日本語ローカライズの形式で出力されるようになります。
+
+::
+
+ language = 'ja'
+
+
+.. }}}
+.. 参考サイト {{{
+
+参考サイト
+------------------------------
+
+* `Ubuntu Weekly Recipe：連載｜gihyo.jp … 技術評論社 <http://gihyo.jp/admin/serial/01/ubuntu-recipe>`_
+* `Ubuntu Server Guide <https://help.ubuntu.com/12.04/serverguide/index.html>`_
+* `OMG! Ubuntu! | Everything Ubuntu. Daily. <http://www.omgubuntu.co.uk/>`_
+
+.. }}}
+.. {{{
+
+
+------------------------------
+
+.. }}}
+
+.. vim syntax sugars {{{
+   vim:set ft=rst foldmethod=marker:
+   }}}

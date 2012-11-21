@@ -2,7 +2,7 @@ Temlate
 ==============================
 :更新日付: |today|
 
-.. はじめに{{{
+.. はじめに {{{
 
 はじめに
 ------------------------------
@@ -12,7 +12,7 @@ Georg Brandlによって開発され、BSDライセンスのもとで公開さ�
 reStructuredText のソースで作成され、Sphinxを使って作られています。
 
 .. }}}
-.. 目次{{{
+.. 目次 {{{
 
 .. contents::
   これは目次です
@@ -23,10 +23,11 @@ reStructuredText のソースで作成され、Sphinxを使って作られてい
 .. }}}
 .. {{{
 
+
 ------------------------------
 
 .. }}}
-.. 参考サイト{{{
+.. 参考サイト {{{
 
 参考サイト
 ------------------------------
@@ -35,7 +36,6 @@ reStructuredText のソースで作成され、Sphinxを使って作られてい
 * `Sphinx-Users.jp :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/>`_
 
 .. }}}
-.. vim syntax sugars{{{
+.. vim syntax sugars {{{
    vim:set ft=rst foldmethod=marker:
-   }}}
-
+.. }}}

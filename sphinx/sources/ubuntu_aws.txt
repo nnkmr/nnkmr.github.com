@@ -1,5 +1,5 @@
-Sphinx 
-==============================
+Amazon Web Services で Ubuntu Server を使用する 
+================================================
 :更新日付: |today|
 
 .. はじめに {{{
@@ -7,25 +7,20 @@ Sphinx
 はじめに
 ------------------------------
 
-Sphinx は Phython のドキュメントを作成するために作られたツールです。
-Georg Brandlによって開発され、BSDライセンスのもとで公開されています。
-reStructuredText のソースで作成され、Sphinxを使って作られています。
+Ubuntu Server を早く簡単に使用してみたい場合、Amazon Web Services (AWS) の Amazon Elastic Compute Cloud(Amazon EC2) を使用するのが一番です。
+Ubuntu 公式の Amazon Machine Image(AMI) が用意されておりポチッとするだけで始められます。
+また、新規ユーザーには一年間の無料使用枠もあるのでコストを考えずに使用することができます。
 
-.. }}}
-.. 目次 {{{
-
-目次:
-
-.. toctree::
-   :maxdepth: 2
-
-   sphinx_github
+* `クラウドサービス無料 利用枠のご案内 | アマゾン ウェブ サービス（AWS 日本語） <http://aws.amazon.com/jp/free/>`_
+* `AWS 無料使用範囲とは - 入門ガイド <http://docs.amazonwebservices.com/ja_jp/gettingstarted/latest/awsgsg-freetier/TestDriveFreeTier.html>`_
 
 .. }}}
 .. はじめ方 {{{
 
 はじめ方
 -----------------------------------------
+
+.. image:: ./images/ubuntu-aws-01.png
 
 * `Sphinxをはじめよう :: Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/index.html>`_
 
@@ -83,8 +78,7 @@ conf.py の設定
 参考サイト
 ------------------------------
 
-* `Sphinx (本家) <http://sphinx.pocoo.org/>`_
-* `Sphinx-Users.jp :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/>`_
+* `EC2StartersGuide - Community Ubuntu Documentation <https://help.ubuntu.com/community/EC2StartersGuide>`_
 
 .. }}}
 .. {{{

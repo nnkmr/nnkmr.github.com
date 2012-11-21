@@ -19,6 +19,9 @@ n_nkmr's Wiki
    :maxdepth: 3
 
    sphinx
+   ubuntu
+   vim
+   tips
    test
 
 .. }}}

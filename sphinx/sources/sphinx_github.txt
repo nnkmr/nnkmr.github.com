@@ -2,7 +2,7 @@ GitHub で Sphinx
 ==============================
 :更新日付: |today|
 
-.. はじめに{{{
+.. はじめに {{{
 
 はじめに
 ------------------------------
@@ -10,7 +10,7 @@ GitHub で Sphinx
 `GitHub Pages <http://pages.github.com/>`_ に Sphinx で生成したドキュメントを公開する方法です。
 
 .. }}}
-.. GitHub Pagesを用意する{{{
+.. GitHub Pagesを用意する {{{
 
 GitHub Pagesを用意します
 -----------------------------------------
@@ -41,22 +41,24 @@ Github Pages では各リポジトリごとにプロジェクトページを作�
 各プロジェクトごとにページを作成することでマニュアルなどの公開が便利にできます。
 
 .. }}}
-.. sphinxtogitdub のインストール{{{
+.. sphinxtogitdub のインストール {{{
 
 sphinxtogitdub のインストール
 ------------------------------
 
 Sphinx で生成したドキュメントをそのまま公開すると、スタイルシートなど静的ファイルへのリンクが切れてしまいます。
-静的ファイルは、ルートからのパスを想定しているためです。
+静的ファイルはルートからのパスを想定しているためです。
 html 生成時にリンクを修正してくれるプラグインが公開されています。
-sphinxtogithub を利用すると、 Github Pages 用のリンクに修正してくれます。
 
+* `michaeljones/sphinx-to-github · GitHub <https://github.com/michaeljones/sphinx-to-github>`_
+
+sphinxtogithub を利用すると Github Pages 用のリンクに修正してくれます。
 sphinxtogithub をインストールするには easy_install を使用します。
 easy_install は Ubuntu では python-setuptools に梱包されています。
 
 .. code-block:: bash
 
-  $ sudo apt-get install python-setuptools
+ $ sudo apt-get install python-setuptools
 
 easy_install を使って sphinxtogithub をインストールします。
 
@@ -70,12 +72,12 @@ Sphinx の設定ファイル conf.py の extensions に sphinxtogithub を追加
 
 ::
 
-  extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinxtogithub']
+ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinxtogithub']
 
 make html でプロジェクトを生成しなおすと、Github Pages 対応ができます。
 
 .. }}}
-.. 更新作業{{{
+.. 更新作業 {{{
 
 更新作業
 -----------------------------------------
@@ -99,12 +101,11 @@ make html でプロジェクトを生成しなおすと、Github Pages 対応が
  git push 
 
 .. }}}
-.. 参考サイト{{{
+.. 参考サイト {{{
 
 参考サイト
 ------------------------------
 
-* `michaeljones/sphinx-to-github <https://github.com/michaeljones/sphinx-to-github>`_
 * `Hosting your Sphinx docs in Github - Luca Sbardella <http://lucasbardella.com/report/hosting-your-sphinx-docs-in-github/>`_
 
 .. }}}
@@ -114,6 +115,6 @@ make html でプロジェクトを生成しなおすと、Github Pages 対応が
 -----------------------------------------
 
 .. }}}
-.. vim syntax sugars{{{
+.. vim syntax sugars {{{
    vim:set ft=rst foldmethod=marker:
-   }}}
+.. }}}
