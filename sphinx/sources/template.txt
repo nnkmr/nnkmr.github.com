@@ -7,23 +7,12 @@ Temlate
 はじめに
 ------------------------------
 
-Sphinx は Phython のドキュメントを作成するために作られたツールです。
-Georg Brandlによって開発され、BSDライセンスのもとで公開されています。
-reStructuredText のソースで作成され、Sphinxを使って作られています。
+概要など
 
 .. }}}
-.. 目次 {{{
+.. 内容 {{{
 
-.. contents::
-  これは目次です
-  :local:
-  :depth: 2
-  :backlinks: none
-
-.. }}}
-.. {{{
-
-
+内容
 ------------------------------
 
 .. }}}
@@ -32,8 +21,13 @@ reStructuredText のソースで作成され、Sphinxを使って作られてい
 参考サイト
 ------------------------------
 
-* `Sphinx (本家) <http://sphinx.pocoo.org/>`_
-* `Sphinx-Users.jp :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/>`_
+* 
+
+.. }}}
+.. {{{
+
+
+------------------------------
 
 .. }}}
 .. vim syntax sugars {{{

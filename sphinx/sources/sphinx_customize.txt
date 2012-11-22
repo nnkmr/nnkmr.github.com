@@ -1,13 +1,13 @@
-GitHub で Sphinx
-==============================
+Sphinx のテンプレートをカスタマイズする
+=======================================
 :更新日付: |today|
 
-.. はじめに  {{{
+.. はじめに {{{
 
 はじめに
 ------------------------------
 
-`GitHub Pages <http://pages.github.com/>`_ に Sphinx で生成したドキュメントを公開する方法です。
+デフォルトのテンプレートを使用していると、あまりにもみっともないので、自分らしくカスタマイズする。
 
 .. }}}
 .. GitHub Pagesを用意する {{{
@@ -106,7 +106,7 @@ make html でプロジェクトを生成しなおすと、Github Pages 対応が
 参考サイト
 ------------------------------
 
-* `Hosting your Sphinx docs in Github - Luca Sbardella <http://lucasbardella.com/report/hosting-your-sphinx-docs-in-github/>`_
+* `Webサイトを作ろう(オリジナルテーマの作成) :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/cookbook/makingwebsite/index.html>`_
 
 .. }}}
 .. {{{

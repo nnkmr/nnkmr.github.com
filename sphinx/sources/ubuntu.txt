@@ -20,33 +20,9 @@ Vine Linux にはあまり不満はなかったのですがね。
 目次:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    ubuntu_aws
-
-.. }}}
-.. はじめ方 {{{
-
-はじめ方
------------------------------------------
-
-.. }}}
-.. conf.py の設定 {{{
-
-conf.py の設定
-------------------------------
-
-* `ビルド設定ファイル — Sphinx v1.0 (hg) documentation <http://sphinx.shibu.jp/config.html>`_
-
-日本語化
-'''''''''
-
-日付などが日本語ローカライズの形式で出力されるようになります。
-
-::
-
- language = 'ja'
-
 
 .. }}}
 .. 参考サイト {{{
@@ -54,8 +30,11 @@ conf.py の設定
 参考サイト
 ------------------------------
 
+* `Home | Ubuntu <http://www.ubuntu.com/>`_
+* `Homepage | Ubuntu Japanese Team <http://www.ubuntulinux.jp/>`_
+
+* `Ubuntu Weekly Topics：クリップ｜gihyo.jp … 技術評論社 <http://gihyo.jp/admin/clip/01/ubuntu-topics>`_
 * `Ubuntu Weekly Recipe：連載｜gihyo.jp … 技術評論社 <http://gihyo.jp/admin/serial/01/ubuntu-recipe>`_
-* `Ubuntu Server Guide <https://help.ubuntu.com/12.04/serverguide/index.html>`_
 * `OMG! Ubuntu! | Everything Ubuntu. Daily. <http://www.omgubuntu.co.uk/>`_
 
 .. }}}
@@ -65,7 +44,6 @@ conf.py の設定
 ------------------------------
 
 .. }}}
-
 .. vim syntax sugars {{{
    vim:set ft=rst foldmethod=marker:
    }}}

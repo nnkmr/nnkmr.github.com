@@ -1,0 +1,191 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Sphinx のセットアップ &mdash; n_nkmr&#39;s Wiki</title>
+    
+    <link rel="stylesheet" href="static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/translations.js"></script>
+    <link rel="top" title="n_nkmr&#39;s Wiki" href="index.html" />
+    <link rel="up" title="Sphinx" href="sphinx.html" />
+    <link rel="next" title="GitHub で Sphinx" href="sphinx_github.html" />
+    <link rel="prev" title="Sphinx" href="sphinx.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphinx_github.html" title="GitHub で Sphinx"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphinx.html" title="Sphinx"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">n_nkmr&#39;s Wiki</a> &raquo;</li>
+          <li><a href="sphinx.html" accesskey="U">Sphinx</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sphinx">
+<h1>Sphinx のセットアップ<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">November 22, 2012</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h2>はじめに<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx を Ubuntu で使用する方法です。</p>
+</div>
+<div class="section" id="id2">
+<h2>はじめ方<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx-users.jp/gettingstarted/index.html">Sphinxをはじめよう :: Sphinx-users.jp</a></li>
+</ul>
+<p>Ubuntu には sphinx のパッケージが用意されていて、簡単にインストールすることができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install python-sphinx
+</pre></div>
+</div>
+<p>Ubuntu 12.04 では sphinx 1.1.3 がインストールされます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>dpkg-query -l | grep python-sphinx
+ii  python-sphinx  1.1.3+dfsg-2ubuntu2  documentation generator <span class="k">for </span>Python projects <span class="o">(</span>implemented in Python 2<span class="o">)</span>
+</pre></div>
+</div>
+<p>Sphinx では、以下のコマンドを実行し質問に答えることで、プロジェクトが作成されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sphinx-quickstart
+</pre></div>
+</div>
+<p>いくつか質問されますが、必須で回答しなければならないのは、次の項目です。</p>
+<ul class="simple">
+<li>プロジェクト名: n_nkmr&#8217;s wiki</li>
+<li>バージョン番号: 0.0.1</li>
+<li>著者の名前: n_nkmr</li>
+</ul>
+<p>後で、conf.py を編集することで変更が可能です。</p>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx-users.jp/gettingstarted/sphinxquickstart.html">sphinx-quickstartの詳細説明 :: ドキュメンテーションツール スフィンクス Sphinx-users.jp</a></li>
+</ul>
+</div>
+<div class="section" id="conf-py">
+<h2>conf.py の設定<a class="headerlink" href="#conf-py" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx.shibu.jp/config.html">ビルド設定ファイル — Sphinx v1.0 (hg) documentation</a></li>
+</ul>
+<div class="section" id="id3">
+<h3>日本語化<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>日付などが日本語ローカライズの形式で出力されるようになります。</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">language</span> <span class="o">=</span> <span class="s">&#39;ja&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>参考サイト<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx.pocoo.org/">Sphinx (本家)</a></li>
+<li><a class="reference external" href="http://sphinx-users.jp/">Sphinx-Users.jp :: ドキュメンテーションツール スフィンクス Sphinx-users.jp</a></li>
+</ul>
+<hr class="docutils" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Sphinx のセットアップ</a><ul>
+<li><a class="reference internal" href="#id1">はじめに</a></li>
+<li><a class="reference internal" href="#id2">はじめ方</a></li>
+<li><a class="reference internal" href="#conf-py">conf.py の設定</a><ul>
+<li><a class="reference internal" href="#id3">日本語化</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">参考サイト</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="sphinx.html"
+                        title="前の章へ">Sphinx</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="sphinx_github.html"
+                        title="次の章へ">GitHub で Sphinx</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/sphinx_setup.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphinx_github.html" title="GitHub で Sphinx"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphinx.html" title="Sphinx"
+             >previous</a> |</li>
+        <li><a href="index.html">n_nkmr&#39;s Wiki</a> &raquo;</li>
+          <li><a href="sphinx.html" >Sphinx</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, n_nkmr.
+      このドキュメントは <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3 で生成しました。
+    </div>
+  </body>
+</html>

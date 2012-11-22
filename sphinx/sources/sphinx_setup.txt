@@ -1,0 +1,87 @@
+Sphinx のセットアップ
+==============================
+:更新日付: |today|
+
+.. はじめに {{{
+
+はじめに
+------------------------------
+
+Sphinx を Ubuntu で使用する方法です。
+
+.. }}}
+.. はじめ方 {{{
+
+はじめ方
+-----------------------------------------
+
+* `Sphinxをはじめよう :: Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/index.html>`_
+
+Ubuntu には sphinx のパッケージが用意されていて、簡単にインストールすることができます。
+
+.. code-block:: bash
+
+ $ sudo apt-get install python-sphinx
+
+Ubuntu 12.04 では sphinx 1.1.3 がインストールされます。
+
+.. code-block:: bash
+
+ $ dpkg-query -l | grep python-sphinx
+ ii  python-sphinx  1.1.3+dfsg-2ubuntu2  documentation generator for Python projects (implemented in Python 2)
+
+
+Sphinx では、以下のコマンドを実行し質問に答えることで、プロジェクトが作成されます。
+
+.. code-block:: bash
+
+ $ sphinx-quickstart
+
+いくつか質問されますが、必須で回答しなければならないのは、次の項目です。
+
+* プロジェクト名: n_nkmr's wiki
+* バージョン番号: 0.0.1
+* 著者の名前: n_nkmr
+
+後で、conf.py を編集することで変更が可能です。
+
+* `sphinx-quickstartの詳細説明 :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/gettingstarted/sphinxquickstart.html>`_
+
+.. }}}
+.. conf.py の設定 {{{
+
+conf.py の設定
+------------------------------
+
+* `ビルド設定ファイル — Sphinx v1.0 (hg) documentation <http://sphinx.shibu.jp/config.html>`_
+
+日本語化
+'''''''''
+
+日付などが日本語ローカライズの形式で出力されるようになります。
+
+::
+
+ language = 'ja'
+
+
+.. }}}
+.. 参考サイト {{{
+
+参考サイト
+------------------------------
+
+* `Sphinx (本家) <http://sphinx.pocoo.org/>`_
+* `Sphinx-Users.jp :: ドキュメンテーションツール スフィンクス Sphinx-users.jp <http://sphinx-users.jp/>`_
+
+.. }}}
+.. {{{
+
+
+------------------------------
+
+.. }}}
+
+.. vim syntax sugars {{{
+   vim:set ft=rst foldmethod=marker:
+   }}}

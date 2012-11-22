@@ -7,8 +7,9 @@ n_nkmr's Wiki
 はじめに
 ------------------------------
 
-ここはあくまでも個人的なメモです。
-正確性に欠ける点があると思いますので、ご注意ください。
+日々更新されるメモ帳にできれば。
+
+ネットの情報を元にああでもない、こうでもないと試してみた、個人的なメモなので、正確性に欠ける点や、古くなってしまっている箇所があると思います。
 
 .. }}}
 .. 目次 {{{
@@ -16,7 +17,7 @@ n_nkmr's Wiki
 目次:
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    sphinx
    ubuntu
@@ -25,14 +26,10 @@ n_nkmr's Wiki
    test
 
 .. }}}
-.. Indices and tables {{{
+.. {{{
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+------------------------------
 
 .. }}}
 .. vim syntax sugars {{{

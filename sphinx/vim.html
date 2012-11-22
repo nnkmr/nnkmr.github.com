@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,9 +7,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Vim &mdash; n_nkmr&#39;s wiki 0.0.1 documentation</title>
+    <title>Vim &mdash; n_nkmr&#39;s Wiki</title>
     
-    <link rel="stylesheet" href="static/default.css" type="text/css" />
+    <link rel="stylesheet" href="static/nature.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -26,7 +25,7 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="static/translations.js"></script>
-    <link rel="top" title="n_nkmr&#39;s wiki 0.0.1 documentation" href="index.html" />
+    <link rel="top" title="n_nkmr&#39;s Wiki" href="index.html" />
     <link rel="next" title="Tips" href="tips.html" />
     <link rel="prev" title="Amazon Web Services で Ubuntu Server を使用する" href="ubuntu_aws.html" /> 
   </head>
@@ -43,7 +42,7 @@
         <li class="right" >
           <a href="ubuntu_aws.html" title="Amazon Web Services で Ubuntu Server を使用する"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">n_nkmr&#39;s Wiki</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -58,7 +57,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">November 21, 2012</td>
+<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">November 22, 2012</td>
 </tr>
 </tbody>
 </table>
@@ -191,24 +190,24 @@ set foldmethod=marker
 " }}}</pre>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>画像分割<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>画像分割<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>水平分割　 :sp filename</li>
 <li>垂直分割　 :vsp filename</li>
 <li>画面移動　 C-w hjkl</li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h2>バッファ移動<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>バッファ移動<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>別ファイルを開く　:e filename</li>
 <li>1つ前のバッファ　 :bp</li>
 <li>1つ後のバッファ　 :bn</li>
 </ul>
 </div>
-<div class="section" id="id5">
-<h2>折り畳み<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>折り畳み<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>よく使うコマンド</li>
 </ul>
@@ -259,8 +258,8 @@ set foldmethod=marker
 </tbody>
 </table>
 </div>
-<div class="section" id="id6">
-<h2>参考サイト<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>参考サイト<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://www.vim.org/">welcome home : vim online</a></li>
 <li><a class="reference external" href="http://vim-jp.org/vimdoc-ja/">Vim documentation: help</a></li>
@@ -268,87 +267,6 @@ set foldmethod=marker
 <li><a class="reference external" href="http://www.kaoriya.net/">KaoriYa</a></li>
 </ul>
 <hr class="docutils" />
-<div class="section" id="bash">
-<h3>さくらのレンタルサーバで bash を標準にする<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>chsh -s /usr/local/bin/bash
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="bash-profile-bashrc">
-<h1>.bash-profile と .bashrc を作る<a class="headerlink" href="#bash-profile-bashrc" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="bash-profile">
-<h2>&#8221; .bash_profile &#8220;<a class="headerlink" href="#bash-profile" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># .bash_profile</span>
-
-<span class="c"># Get the aliases and functions</span>
-<span class="k">if</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span>; <span class="k">then</span>
- . ~/.bashrc
-<span class="k">fi</span>
-
-<span class="c"># User specific environment and startup programs</span>
-
-<span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/bin
-<span class="nb">export </span>PATH
-
-<span class="nv">LANG</span><span class="o">=</span>ja_JP.UTF-8
-<span class="nb">export </span>LANG
-</pre></div>
-</div>
-</div>
-<div class="section" id="bashrc">
-<h2>.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># .bashrc</span>
-
-<span class="c"># Source global definitions</span>
-<span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span>; <span class="k">then</span>
- . /etc/bashrc
-<span class="k">fi</span>
-
-<span class="c"># User specific aliases and functions</span>
-<span class="c">#export LANG=ja_JP.UTF-8</span>
-
-<span class="c"># path</span>
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$PATH&quot;</span>:/usr/sbin:/sbin
-</pre></div>
-</div>
-<div class="section" id="id7">
-<h3>さくらのレンタルサーバで vim をインストールする<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<p>さくらのレンタルサーバは vi がうまい事 utf8 を扱えないので、vimを入れて
-utf8対応することにする。</p>
-</div>
-</div>
-</div>
-<div class="section" id="id8">
-<h1>vim のインストール<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-bash"><div class="highlight"><pre>mkdir -p ~/local/src
-<span class="nb">cd</span> ~/local/src
-wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
-bunzip2 vim-7.3.tar.bz2
-tar xvzf vim-7.3.tar
-./configure --enable-multibyte --enable-xim --enable-fontset --with-features<span class="o">=</span>big --prefix<span class="o">=</span><span class="nv">$HOME</span>/local
-make
-make install
-</pre></div>
-</div>
-</div>
-<div class="section" id="vim-bash">
-<h1>vim をbashに登録する<a class="headerlink" href="#vim-bash" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># .bashrc</span>
-
-<span class="c"># Source global definitions</span>
-<span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span>; <span class="k">then</span>
- . /etc/bashrc
-<span class="k">fi</span>
-
-<span class="c"># User specific aliases and functions</span>
-<span class="c">#export LANG=ja_JP.UTF-8</span>
-
-<span class="c"># path</span>
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$PATH&quot;</span>:/usr/sbin:/sbin:<span class="nv">$HOME</span>/local/bin
-<span class="nb">alias </span><span class="nv">vi</span><span class="o">=</span><span class="s1">&#39;vim&#39;</span>
-</pre></div>
 </div>
 </div>
 
@@ -363,25 +281,12 @@ make install
 <li><a class="reference internal" href="#">Vim</a><ul>
 <li><a class="reference internal" href="#id1">はじめに</a></li>
 <li><a class="reference internal" href="#vimrc">vimrc</a></li>
-<li><a class="reference internal" href="#id3">画像分割</a></li>
-<li><a class="reference internal" href="#id4">バッファ移動</a></li>
-<li><a class="reference internal" href="#id5">折り畳み</a></li>
-<li><a class="reference internal" href="#id6">参考サイト</a><ul>
-<li><a class="reference internal" href="#bash">さくらのレンタルサーバで bash を標準にする</a></li>
+<li><a class="reference internal" href="#id2">画像分割</a></li>
+<li><a class="reference internal" href="#id3">バッファ移動</a></li>
+<li><a class="reference internal" href="#id4">折り畳み</a></li>
+<li><a class="reference internal" href="#id5">参考サイト</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#bash-profile-bashrc">.bash-profile と .bashrc を作る</a><ul>
-<li><a class="reference internal" href="#bash-profile">&#8221; .bash_profile &#8220;</a></li>
-<li><a class="reference internal" href="#bashrc">.bashrc</a><ul>
-<li><a class="reference internal" href="#id7">さくらのレンタルサーバで vim をインストールする</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id8">vim のインストール</a></li>
-<li><a class="reference internal" href="#vim-bash">vim をbashに登録する</a></li>
 </ul>
 
   <h4>前のトピックへ</h4>
@@ -424,7 +329,7 @@ make install
         <li class="right" >
           <a href="ubuntu_aws.html" title="Amazon Web Services で Ubuntu Server を使用する"
              >previous</a> |</li>
-        <li><a href="index.html">n_nkmr&#39;s wiki 0.0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">n_nkmr&#39;s Wiki</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
