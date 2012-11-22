@@ -19,6 +19,7 @@ n_nkmr's Wiki
 .. toctree::
    :maxdepth: 1
 
+   github
    sphinx
    ubuntu
    vim
