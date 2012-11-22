@@ -1,0 +1,151 @@
+GitHub のセットアップ
+==============================
+:更新日付: |today|
+
+.. はじめに {{{
+
+はじめに
+------------------------------
+
+GitHub にアカウントを作成し、Ubuntu から使用する方法です。
+
+.. }}}
+.. GitHub のアカウント作成 {{{
+
+GitHub のアカウント作成
+-----------------------------------------
+
+`GitHub <https://github.com/>`_ のサイトにアクセスします。 
+
+.. image:: ./images/github-01.png
+   :scale: 70%
+
+無料プランを選択する場合は、右上にある「Create a free account」をクリックします。 
+有償プランを選択する場合は、「Plans, Pricing and Signup」をクリックし希望のプランを選択します。 
+
+.. image:: ./images/github-02.png
+   :scale: 70%
+
+簡単なアカウント情報を入力して、アカウントを作成します。 
+ユーザー名は半角英数字と「-」しか使用できません。また、「-」から始まるユーザー名は使用できません。
+
+.. image:: ./images/github-03.png
+   :scale: 70%
+
+アカウントが登録されるとユーザーページが作成されます。
+
+https://github.com/nnkmr
+
+右上にある「Account settings」をクリックすると登録内容を変更することができます。
+
+
+.. }}}
+.. SSH Public Key の登録 {{{
+
+SSH Public Key の登録
+-----------------------------------------
+
+アカウントが作成されたら、「Account settings」の「SSH Keys」で SSH のキーを登録しましょう。
+
+すでにキーがある場合は公開鍵「id_rsa.pub」の中身を登録するだけです。
+
+キーがない場合には Ubuntu のターミナルを起動して ssh-keygen でキーを作成して公開鍵の中身を登録します。
+
+.. code-block:: bash
+
+ $ ssh-keygen
+
+.. }}}
+.. クライアント環境(Ubuntu)の準備 {{{
+
+クライアント環境(Ubuntu)の準備
+-----------------------------------------
+
+Ubuntu には git のパッケージが用意されていて、簡単にインストールすることができます。
+
+.. code-block:: bash
+
+ $ sudo apt-get install git
+
+Ubuntu 12.10 では git 1.7.10 がインストールされます。
+
+.. code-block:: bash
+
+ $ dpkg-query -l git
+ ii  git  1:1.7.10.4-1ubuntu1  amd64  fast, scalable, distributed revision control system
+
+Git の初期設定をします。
+
+.. code-block:: bash
+
+ $ git config --global user.name 'n_nkmr'
+ $ git config --global user.email 'n.nkmrg@gmial.com'
+ $ git config --global color.ui auto
+ $ more ~/.gitconfig
+
+設定ファイルは ~/.gitconfig に保存されます。
+
+とりあえず、プロジェクトのレポジトリを作成します。
+
+.. code-block:: bash
+
+ $ mkdir -p ~/git/myproject
+ $ cd ~/git/sphinx/myproject
+ $ git init
+ Initialized empty Git repository in /home/username/git/myproject/.git/
+ $ touch README
+ $ git add README
+ $ git commit -m 'first commit'
+ $ git remote add origin git@github.com:nnkmr/myproject.git
+ $ git push -u origin master
+
+ファイルを更新したり、作成したりしたら、とりあえずコミットしておく。
+
+.. code-block:: bash
+
+ $ git add .
+ $ git commit -m "COMMENT"
+
+作業が完了したり、切りがついたら、サーバーに push して共有します。
+
+.. code-block:: bash
+
+ $ git push
+
+コミットの状況や過去の履歴は簡単に確認できます。
+
+.. code-block:: bash
+
+ $ git status
+ $ git log
+
+操作方法が分からなくなったら、help で確認することができます。
+
+.. code-block:: bash
+
+ $ git help
+
+
+
+.. }}}
+
+.. 参考サイト {{{
+
+参考サイト
+------------------------------
+
+* `Git習得のためのGithub入門 #git #AdventCalendar #tutorial #Github - Qiita <http://qiita.com/items/4272209ad80380933000>`_
+* `Gitを使いこなすための20のコマンド - SourceForge.JP Magazine : オープンソースの話題満載 <http://sourceforge.jp/magazine/09/03/16/0831212>`_
+* `github.comでphp-users.jpを管理するまでの作業ログ | IDEA*IDEA <http://www.ideaxidea.com/archives/2008/10/githubcomphpusersjp.html>`_
+
+.. }}}
+.. {{{
+
+
+------------------------------
+
+.. }}}
+
+.. vim syntax sugars {{{
+   vim:set ft=rst foldmethod=marker:
+   }}}

@@ -1,49 +1,49 @@
-GitHub
+GitHub 
 ==============================
 :更新日付: |today|
 
-.. はじめに{{{
+.. GitHub とは {{{
 
-はじめに
+GitHub とは
 ------------------------------
 
-GitHub（ギットハブ）はソフトウェア開発プロジェクトのための共有ウェブサービスです。
-Gitバージョン管理システムを使用しています。
-Ruby on Rails および Erlang で構築されているようです。 
-主な開発者は
-`Chris Wanstrath (defunkt) <https://twitter.com/#!/defunkt>`_ 、
-`PJ Hyett (pjhyett) <https://twitter.com/#!/pjhyett>`_ 、
-`Tom Preston-Werner (mojombo) <https://twitter.com/#!/mojombo>`_ です。 
+GitHub は `Git <http://git-scm.com/>`_ を使用できるプロジェクトホスティングサービスです。
+`SourceForge <http://sourceforge.net/>`_ や Google Code に似ています。
+`Ruby on Rails <http://rubyonrails.org/>`_ および `Erlang <http://www.erlang.org/>`_ で開発されていて、現在は GitHub 社によって保守されています。 
+最初 `Chris Wanstrath <https://twitter.com/defunkt>`_, `PJ Hyett <https://twitter.com/pjhyett>`_, `Tom Preston-Werner <https://twitter.com/mojombo>`_ らによって開発されていました。 
+Ruby や Rails 関連を中心に FOSS のプロジエクトがたくさん登録されており、ワンクリックで簡単に fork することができます。
+100MB までは無料で使用できます。
 
 .. }}}
-.. 目次{{{
+.. 目次 {{{
 
-.. contents::
-  これは目次です
-  :local:
-  :depth: 2
-  :backlinks: none
+目次:
 
-.. }}}
-.. {{{
+.. toctree::
+   :maxdepth: 1
 
-------------------------------
+   github_setup
+   sphinx_github
 
 .. }}}
-.. {{{
-
-------------------------------
-
-.. }}}
-.. 参考サイト{{{
+.. 参考サイト {{{
 
 参考サイト
 ------------------------------
 
 * `GitHub <https://github.com/>`_
+* `The Official GitHub Blog <https://github.com/blog>`_
+* `github:help <https://help.github.com/>`_
+* `GitHub(Twitter) <https://twitter.com/github>`_
 
 .. }}}
-.. vim syntax sugars{{{
+.. {{{
+
+
+------------------------------
+
+.. }}}
+
+.. vim syntax sugars {{{
    vim:set ft=rst foldmethod=marker:
    }}}
-

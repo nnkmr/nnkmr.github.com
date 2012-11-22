@@ -1,0 +1,198 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GitHub のセットアップ &mdash; n_nkmr&#39;s Wiki</title>
+    
+    <link rel="stylesheet" href="static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="static/translations.js"></script>
+    <link rel="top" title="n_nkmr&#39;s Wiki" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li><a href="index.html">n_nkmr&#39;s Wiki</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="github">
+<h1>GitHub のセットアップ<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">更新日付:</th><td class="field-body">2012 年 11 月 22 日</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h2>はじめに<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>GitHub にアカウントを作成し、Ubuntu から使用する方法です。</p>
+</div>
+<div class="section" id="id2">
+<h2>GitHub のアカウント作成<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference external" href="https://github.com/">GitHub</a> のサイトにアクセスします。</p>
+<a class="reference internal image-reference" href="images/github-01.png"><img alt="images/github-01.png" src="images/github-01.png" style="width: 840.0px; height: 415.8px;" /></a>
+<p>無料プランを選択する場合は、右上にある「Create a free account」をクリックします。
+有償プランを選択する場合は、「Plans, Pricing and Signup」をクリックし希望のプランを選択します。</p>
+<a class="reference internal image-reference" href="images/github-02.png"><img alt="images/github-02.png" src="images/github-02.png" style="width: 849.1px; height: 484.4px;" /></a>
+<p>簡単なアカウント情報を入力して、アカウントを作成します。
+ユーザー名は半角英数字と「-」しか使用できません。また、「-」から始まるユーザー名は使用できません。</p>
+<a class="reference internal image-reference" href="images/github-03.png"><img alt="images/github-03.png" src="images/github-03.png" style="width: 850.5px; height: 501.2px;" /></a>
+<p>アカウントが登録されるとユーザーページが作成されます。</p>
+<p><a class="reference external" href="https://github.com/nnkmr">https://github.com/nnkmr</a></p>
+<p>右上にある「Account settings」をクリックすると登録内容を変更することができます。</p>
+</div>
+<div class="section" id="ssh-public-key">
+<h2>SSH Public Key の登録<a class="headerlink" href="#ssh-public-key" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アカウントが作成されたら、「Account settings」の「SSH Keys」で SSH のキーを登録しましょう。</p>
+<p>すでにキーがある場合は公開鍵「id_rsa.pub」の中身を登録するだけです。</p>
+<p>キーがない場合には Ubuntu のターミナルを起動して ssh-keygen でキーを作成して公開鍵の中身を登録します。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ssh-keygen
+</pre></div>
+</div>
+</div>
+<div class="section" id="ubuntu">
+<h2>クライアント環境(Ubuntu)の準備<a class="headerlink" href="#ubuntu" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Ubuntu には git のパッケージが用意されていて、簡単にインストールすることができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install git
+</pre></div>
+</div>
+<p>Ubuntu 12.10 では git 1.7.10 がインストールされます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>dpkg-query -l git
+ii  git  1:1.7.10.4-1ubuntu1  amd64  fast, scalable, distributed revision control system
+</pre></div>
+</div>
+<p>Git の初期設定をします。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git config --global user.name <span class="s1">&#39;n_nkmr&#39;</span>
+<span class="nv">$ </span>git config --global user.email <span class="s1">&#39;n.nkmrg@gmial.com&#39;</span>
+<span class="nv">$ </span>git config --global color.ui auto
+<span class="nv">$ </span>more ~/.gitconfig
+</pre></div>
+</div>
+<p>設定ファイルは ~/.gitconfig に保存されます。</p>
+<p>とりあえず、プロジェクトのレポジトリを作成します。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>mkdir -p ~/git/myproject
+<span class="nv">$ </span><span class="nb">cd</span> ~/git/sphinx/myproject
+<span class="nv">$ </span>git init
+Initialized empty Git repository in /home/username/git/myproject/.git/
+<span class="nv">$ </span>touch README
+<span class="nv">$ </span>git add README
+<span class="nv">$ </span>git commit -m <span class="s1">&#39;first commit&#39;</span>
+<span class="nv">$ </span>git remote add origin git@github.com:nnkmr/myproject.git
+<span class="nv">$ </span>git push -u origin master
+</pre></div>
+</div>
+<p>ファイルを更新したり、作成したりしたら、とりあえずコミットしておく。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git add .
+<span class="nv">$ </span>git commit -m <span class="s2">&quot;COMMENT&quot;</span>
+</pre></div>
+</div>
+<p>作業が完了したり、切りがついたら、サーバーに push して共有します。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git push
+</pre></div>
+</div>
+<p>コミットの状況や過去の履歴は簡単に確認できます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git status
+<span class="nv">$ </span>git log
+</pre></div>
+</div>
+<p>操作方法が分からなくなったら、help で確認することができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git <span class="nb">help</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>参考サイト<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://qiita.com/items/4272209ad80380933000">Git習得のためのGithub入門 #git #AdventCalendar #tutorial #Github - Qiita</a></li>
+<li><a class="reference external" href="http://sourceforge.jp/magazine/09/03/16/0831212">Gitを使いこなすための20のコマンド - SourceForge.JP Magazine : オープンソースの話題満載</a></li>
+<li><a class="reference external" href="http://www.ideaxidea.com/archives/2008/10/githubcomphpusersjp.html">github.comでphp-users.jpを管理するまでの作業ログ | IDEA*IDEA</a></li>
+</ul>
+<hr class="docutils" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GitHub のセットアップ</a><ul>
+<li><a class="reference internal" href="#id1">はじめに</a></li>
+<li><a class="reference internal" href="#id2">GitHub のアカウント作成</a></li>
+<li><a class="reference internal" href="#ssh-public-key">SSH Public Key の登録</a></li>
+<li><a class="reference internal" href="#ubuntu">クライアント環境(Ubuntu)の準備</a></li>
+<li><a class="reference internal" href="#id4">参考サイト</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/github_setup.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li><a href="index.html">n_nkmr&#39;s Wiki</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, n_nkmr.
+      このドキュメントは <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3 で生成しました。
+    </div>
+  </body>
+</html>
