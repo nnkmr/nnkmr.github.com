@@ -40,20 +40,85 @@ https://github.com/nnkmr
 
 
 .. }}}
-.. SSH Public Key の登録 {{{
+.. SSH Key の登録 {{{
 
-SSH Public Key の登録
+SSH Key の登録
 -----------------------------------------
 
-アカウントが作成されたら、「Account settings」の「SSH Keys」で SSH のキーを登録しましょう。
+GitHub では、リポジトリーへのアクセスは、SSHを利用した公開鍵認証で行います。
+公開鍵認証に必要な SSH Key の作成と GitHub への登録が必要です。
 
-すでにキーがある場合は公開鍵「id_rsa.pub」の中身を登録するだけです。
+SSH Key の作成
+^^^^^^^^^^^^^^^^^^^^^^
 
-キーがない場合には Ubuntu のターミナルを起動して ssh-keygen でキーを作成して公開鍵の中身を登録します。
+SSH Key は ssh-keygen コマンドで作成することができます。
 
 .. code-block:: bash
 
- $ ssh-keygen
+ $ ssh-keygen -t rsa -C "n.nkmrg@gmail.com"
+ Generating public/private rsa key pair.
+ Enter file in which to save the key (/home/username/.ssh/id_rsa): 
+ Enter passphrase (empty for no passphrase): 
+ Enter same passphrase again: 
+ Your identification has been saved in /home/username/.ssh/id_rsa.
+ Your public key has been saved in /home/username/.ssh/id_rsa.pub.
+ The key fingerprint is:
+ myfingerpirnt n.nkmrg@gmail.com
+ The key's randomart image is:
+ +--[ RSA 2048]----+
+ |      o .+*...   |
+ |     . + ..=.    |
+ |      o . o.+    |
+ |     . + . o o   |
+ |    . = S   o    |
+ |     = .   .     |
+ |    . E . .      |
+ |     .   .       |
+ |                 |
+ +-----------------+
+
+ $ ls ~/.ssh
+ -rw------- 1 username username 1766 11月 24 17:46 id_rsa
+ -rw-r--r-- 1 username username  399 11月 24 17:46 id_rsa.pub
+
+id_rsa は秘密鍵、id_rsa.pub は公開鍵です。
+id_rsa は他に流出しないように大切に保管する必要があります:。パーミションは 600 でないと認証に失敗します。
+id_rsa.pub の内容を GitHub に登録します。
+
+
+SSH Key の登録
+^^^^^^^^^^^^^^^^^^^^^^^
+
+GitHub のアカウントページの右上の「Account settings」ボタンを押し「SSH Key」のメニューを選択します。
+
+.. image:: ./images/github-04.png
+   :scale: 70%
+
+「Title」に適当な鍵の名前を入力し、「Key」に id_rsa.pub の内容をコピーして貼り付けます。
+
+.. code-block:: bash
+
+ $ cat ~/.ssh/id_rsa.pub
+ ssh-rsa mypublickey n.nkmrg@gmail.com
+
+登録したメールアドレスに以下の題名のメールが届けば、公開鍵の登録は完了です。
+
+ [GitHub] A new public key was added to your account
+
+
+GitHub との公開鍵認証の動作確認
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+公開鍵の登録が完了したら、GitHub との公開鍵認証の動作確認を行なっておきます。
+
+.. code-block:: bash
+
+ $ ssh -T git@github.com
+ The authenticity of host 'github.com (207.97.227.239)' can't be established.
+ RSA key fingerprint is myfingerprint.
+ Are you sure you want to continue connecting (yes/no)? yes
+ Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.
+ Hi nnkmr! You've successfully authenticated, but GitHub does not provide shell access.
 
 .. }}}
 .. クライアント環境(Ubuntu)の準備 {{{
