@@ -7,12 +7,17 @@ GitHub
 GitHub とは
 ------------------------------
 
-GitHub は `Git <http://git-scm.com/>`_ を使用できるプロジェクトホスティングサービスです。
-`SourceForge <http://sourceforge.net/>`_ や Google Code に似ています。
-`Ruby on Rails <http://rubyonrails.org/>`_ および `Erlang <http://www.erlang.org/>`_ で開発されていて、現在は GitHub 社によって保守されています。 
-最初 `Chris Wanstrath <https://twitter.com/defunkt>`_, `PJ Hyett <https://twitter.com/pjhyett>`_, `Tom Preston-Werner <https://twitter.com/mojombo>`_ らによって開発されていました。 
-Ruby や Rails 関連を中心に FOSS のプロジエクトがたくさん登録されており、ワンクリックで簡単に fork することができます。
-100MB までは無料で使用できます。
+　 `GitHub <https://github.com/>`_ は `SourceForge <http://sourceforge.net/>`_ や Google Code などと同じようなプロジェクトホスティングサービスです。
+バージョン管理システムとして `Git <http://git-scm.com/>`_ を使用できることが特徴です。
+
+　Git は Linux の創始者 Linux Toralds 氏によって Linux カーネルのバージョン管理を行うために開発されました。
+各々の開発者がリポジトリの完全なコピーをローカルに複製し(Fork)、ローカルのレポジトリに変更を加え(Commit)、それをコピー元に反映させる(Merge)ことが容易にでき、分散型のバージョン管理が可能です。
+大規模で変更の早い Linux カーネルを管理できるように非常に高速かつスケーラブルになるよう設計されいて、大規模なレポジトリでも高速に Fork や Merge をすることができます。
+
+　GitHub ではワンクリックでレポジトリを Fork することができたり、Git を簡単に使用できるようになっており、FOSS プロジェクトなどで Git の採用が増えました。
+また、個人でも自分で開発していたアプリケーションのソースを公開して開発する人も増え、ソーシャルコーディングと呼ばれるようになりました。
+
+　GitHub は `Chris Wanstrath <https://twitter.com/defunkt>`_, `PJ Hyett <https://twitter.com/pjhyett>`_, `Tom Preston-Werner <https://twitter.com/mojombo>`_ らによって、 `Ruby on Rails <http://rubyonrails.org/>`_ および `Erlang <http://www.erlang.org/>`_ で開発されていて、現在は `GitHub 社 <https://github.com/about>`_ によって保守されています。 
 
 .. }}}
 .. 目次 {{{
